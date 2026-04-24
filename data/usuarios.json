@@ -1,0 +1,13 @@
+{
+    "usuarios": [
+        {
+            "tipo": "Monitor",
+            "nome": "KAUAN HENRIQUE",
+            "escola": "Escola Estadual Dom Pedro II",
+            "materia": "Matemática",
+            "id": "MON001",
+            "email": "kauan@email.com",
+            "senha": "A123456!"
+        }
+    ]
+}

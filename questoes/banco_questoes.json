@@ -1,0 +1,1746 @@
+{
+    "Matematica": {
+        "D01": {
+            "nome": "Descritor 1 - Números Naturais",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Qual é o resultado de 15 + 27?",
+                    "alternativas": [
+                        "A) 40",
+                        "B) 42",
+                        "C) 38",
+                        "D) 45"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Quanto é 8 x 7?",
+                    "alternativas": [
+                        "A) 54",
+                        "B) 56",
+                        "C) 48",
+                        "D) 63"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual número vem depois de 99?",
+                    "alternativas": [
+                        "A) 98",
+                        "B) 999",
+                        "C) 100",
+                        "D) 90"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Quanto é 50 dividido por 5?",
+                    "alternativas": [
+                        "A) 5",
+                        "B) 15",
+                        "C) 10",
+                        "D) 20"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual é o maior número: 87, 78, 98, 89?",
+                    "alternativas": [
+                        "A) 87",
+                        "B) 78",
+                        "C) 89",
+                        "D) 98"
+                    ],
+                    "resposta": "D"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Um número natural é divisível por 3 e por 5. Qual alternativa pode ser esse número?",
+                    "alternativas": [
+                        "A) 20",
+                        "B) 45",
+                        "C) 33",
+                        "D) 50"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é o MDC de 12 e 18?",
+                    "alternativas": [
+                        "A) 2",
+                        "B) 3",
+                        "C) 6",
+                        "D) 9"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Quantos números naturais de 1 a 50 são divisíveis por 6?",
+                    "alternativas": [
+                        "A) 6",
+                        "B) 7",
+                        "C) 8",
+                        "D) 9"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O MMC de 4 e 6 é:",
+                    "alternativas": [
+                        "A) 2",
+                        "B) 24",
+                        "C) 12",
+                        "D) 6"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Um número tem 3 algarismos e é par. Qual NÃO pode ser esse número?",
+                    "alternativas": [
+                        "A) 102",
+                        "B) 256",
+                        "C) 341",
+                        "D) 480"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "A soma de três números naturais consecutivos é 129. Qual é o maior deles?",
+                    "alternativas": [
+                        "A) 41",
+                        "B) 42",
+                        "C) 43",
+                        "D) 44"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é o resto da divisão de 2^10 por 7?",
+                    "alternativas": [
+                        "A) 1",
+                        "B) 2",
+                        "C) 3",
+                        "D) 4"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Um número N dividido por 8 dá quociente 15 e resto 3. Qual é N?",
+                    "alternativas": [
+                        "A) 120",
+                        "B) 123",
+                        "C) 125",
+                        "D) 118"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Qual é o número de divisores do número 36?",
+                    "alternativas": [
+                        "A) 7",
+                        "B) 8",
+                        "C) 9",
+                        "D) 6"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Se N é primo e N+2 também é primo, qual par pode ser (N, N+2)?",
+                    "alternativas": [
+                        "A) (9, 11)",
+                        "B) (11, 13)",
+                        "C) (15, 17)",
+                        "D) (21, 23)"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        },
+        "D02": {
+            "nome": "Descritor 2 - Operações com Frações",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Quanto é 1/2 + 1/2?",
+                    "alternativas": [
+                        "A) 2/4",
+                        "B) 1",
+                        "C) 1/4",
+                        "D) 2"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual fração representa a metade de um todo?",
+                    "alternativas": [
+                        "A) 2/1",
+                        "B) 1/4",
+                        "C) 1/2",
+                        "D) 3/4"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Quanto é 3/4 de 8?",
+                    "alternativas": [
+                        "A) 4",
+                        "B) 5",
+                        "C) 6",
+                        "D) 3"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Simplifique 4/8:",
+                    "alternativas": [
+                        "A) 2/4",
+                        "B) 1/3",
+                        "C) 1/2",
+                        "D) 3/6"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual fração é maior: 1/3 ou 1/4?",
+                    "alternativas": [
+                        "A) São iguais",
+                        "B) 1/4",
+                        "C) 1/3",
+                        "D) Depende"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Quanto é 2/3 + 3/4?",
+                    "alternativas": [
+                        "A) 5/7",
+                        "B) 17/12",
+                        "C) 5/12",
+                        "D) 6/12"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é o resultado de 5/6 - 1/3?",
+                    "alternativas": [
+                        "A) 4/3",
+                        "B) 1/2",
+                        "C) 4/6",
+                        "D) 1/3"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Quanto é 2/5 x 10?",
+                    "alternativas": [
+                        "A) 2",
+                        "B) 20/5",
+                        "C) 4",
+                        "D) 5"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Divida 3/4 por 1/2:",
+                    "alternativas": [
+                        "A) 3/8",
+                        "B) 1/2",
+                        "C) 3/2",
+                        "D) 4/3"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "João comeu 2/5 de uma pizza e Maria comeu 1/3. Quem comeu mais?",
+                    "alternativas": [
+                        "A) Maria",
+                        "B) João",
+                        "C) Comeram igual",
+                        "D) Não é possível saber"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "Simplifica: (3/4 + 1/2) x (2/3 - 1/6)",
+                    "alternativas": [
+                        "A) 5/8",
+                        "B) 7/8",
+                        "C) 3/4",
+                        "D) 5/12"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Um tanque está 3/8 cheio. Após encher mais 1/4, qual é a fração ocupada?",
+                    "alternativas": [
+                        "A) 4/12",
+                        "B) 5/8",
+                        "C) 7/8",
+                        "D) 1/2"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual é o valor de x em: x/4 + x/6 = 5?",
+                    "alternativas": [
+                        "A) 10",
+                        "B) 12",
+                        "C) 15",
+                        "D) 8"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Uma herança de R$12.000 é dividida: 1/3 ao filho, 1/4 à filha e o resto à esposa. Quanto a esposa recebe?",
+                    "alternativas": [
+                        "A) R$4.000",
+                        "B) R$5.000",
+                        "C) R$6.000",
+                        "D) R$3.000"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Calcule: 2 e 1/3 + 1 e 3/4",
+                    "alternativas": [
+                        "A) 3 e 4/7",
+                        "B) 4 e 1/12",
+                        "C) 3 e 13/12",
+                        "D) 4 e 1/7"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        },
+        "D03": {
+            "nome": "Descritor 3 - Porcentagem",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Quanto é 10% de 200?",
+                    "alternativas": [
+                        "A) 10",
+                        "B) 20",
+                        "C) 2",
+                        "D) 100"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "50% de 80 é:",
+                    "alternativas": [
+                        "A) 20",
+                        "B) 30",
+                        "C) 40",
+                        "D) 50"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Como se escreve 25% como fração simplificada?",
+                    "alternativas": [
+                        "A) 25/10",
+                        "B) 1/4",
+                        "C) 2/5",
+                        "D) 1/5"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Um produto custa R$100 e tem 15% de desconto. Quanto de desconto?",
+                    "alternativas": [
+                        "A) R$10",
+                        "B) R$20",
+                        "C) R$15",
+                        "D) R$5"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "100% de qualquer número é:",
+                    "alternativas": [
+                        "A) 0",
+                        "B) 100",
+                        "C) O dobro",
+                        "D) O próprio número"
+                    ],
+                    "resposta": "D"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Uma camisa de R$80 foi vendida com 20% de desconto. Qual o preço final?",
+                    "alternativas": [
+                        "A) R$60",
+                        "B) R$64",
+                        "C) R$70",
+                        "D) R$56"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Um produto aumentou 30% e foi de R$50 para quanto?",
+                    "alternativas": [
+                        "A) R$80",
+                        "B) R$65",
+                        "C) R$75",
+                        "D) R$85"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "De 40 alunos, 35 passaram. Qual porcentagem passou?",
+                    "alternativas": [
+                        "A) 80%",
+                        "B) 87,5%",
+                        "C) 90%",
+                        "D) 75%"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Qual é 12,5% de 400?",
+                    "alternativas": [
+                        "A) 40",
+                        "B) 50",
+                        "C) 60",
+                        "D) 48"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Um salário de R$2000 teve aumento de 8%. Qual o novo salário?",
+                    "alternativas": [
+                        "A) R$2080",
+                        "B) R$2160",
+                        "C) R$2100",
+                        "D) R$2200"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "Um produto teve alta de 20% e depois queda de 20%. O preço final em relação ao inicial é:",
+                    "alternativas": [
+                        "A) Igual",
+                        "B) 4% menor",
+                        "C) 4% maior",
+                        "D) 2% menor"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Após dois aumentos consecutivos de 10%, o preço aumentou no total:",
+                    "alternativas": [
+                        "A) 20%",
+                        "B) 21%",
+                        "C) 22%",
+                        "D) 19%"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Se 40% de N é 60, quanto é 75% de N?",
+                    "alternativas": [
+                        "A) 100",
+                        "B) 112,5",
+                        "C) 90",
+                        "D) 125"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Um produto custa R$156 após desconto de 35%. Qual era o preço original?",
+                    "alternativas": [
+                        "A) R$200",
+                        "B) R$220",
+                        "C) R$240",
+                        "D) R$260"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Uma empresa cresceu 50% em 2022 e 20% em 2023. O crescimento total foi de:",
+                    "alternativas": [
+                        "A) 70%",
+                        "B) 75%",
+                        "C) 80%",
+                        "D) 72%"
+                    ],
+                    "resposta": "C"
+                }
+            ]
+        },
+        "D04": {
+            "nome": "Descritor 4 - Álgebra Básica",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Se x + 5 = 10, quanto vale x?",
+                    "alternativas": [
+                        "A) 15",
+                        "B) 2",
+                        "C) 5",
+                        "D) 50"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é o valor de 2y quando y = 4?",
+                    "alternativas": [
+                        "A) 6",
+                        "B) 8",
+                        "C) 2",
+                        "D) 4"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Resolva: 3x = 12",
+                    "alternativas": [
+                        "A) 4",
+                        "B) 9",
+                        "C) 36",
+                        "D) 3"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Se a = 2 e b = 3, quanto é a + b?",
+                    "alternativas": [
+                        "A) 6",
+                        "B) 5",
+                        "C) 4",
+                        "D) 23"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual expressão representa 'o dobro de x menos 3'?",
+                    "alternativas": [
+                        "A) 2 - 3x",
+                        "B) x/2 - 3",
+                        "C) 2x - 3",
+                        "D) 2(x-3)"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Resolva o sistema: x + y = 10 e x - y = 2. Qual é x?",
+                    "alternativas": [
+                        "A) 4",
+                        "B) 6",
+                        "C) 8",
+                        "D) 5"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual o valor de x em: 2x + 3 = x - 1?",
+                    "alternativas": [
+                        "A) -4",
+                        "B) 4",
+                        "C) -2",
+                        "D) 2"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Simplifique: 3(x + 2) - x",
+                    "alternativas": [
+                        "A) 2x + 2",
+                        "B) 3x + 6",
+                        "C) 2x + 6",
+                        "D) 4x + 6"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Se 4x - 7 = 9, qual é o valor de x?",
+                    "alternativas": [
+                        "A) 2",
+                        "B) 4",
+                        "C) 3",
+                        "D) 5"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Um número somado ao seu triplo resulta em 24. Qual é o número?",
+                    "alternativas": [
+                        "A) 4",
+                        "B) 6",
+                        "C) 8",
+                        "D) 12"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "Resolva: (x+2)/3 = (x-1)/2",
+                    "alternativas": [
+                        "A) x = 5",
+                        "B) x = 7",
+                        "C) x = 4",
+                        "D) x = 6"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Se f(x) = 2x² - 3x + 1, quanto é f(2)?",
+                    "alternativas": [
+                        "A) 1",
+                        "B) 3",
+                        "C) 2",
+                        "D) 5"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "A soma de dois números é 20 e o produto é 96. Quais são eles?",
+                    "alternativas": [
+                        "A) 8 e 12",
+                        "B) 10 e 10",
+                        "C) 6 e 14",
+                        "D) 4 e 16"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Qual é a raiz da equação x² - 5x + 6 = 0?",
+                    "alternativas": [
+                        "A) x=2 e x=3",
+                        "B) x=1 e x=6",
+                        "C) x=-2 e x=-3",
+                        "D) x=2 e x=-3"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Se (x-3)(x+4) = 0, os valores de x são:",
+                    "alternativas": [
+                        "A) 3 e 4",
+                        "B) -3 e 4",
+                        "C) 3 e -4",
+                        "D) -3 e -4"
+                    ],
+                    "resposta": "C"
+                }
+            ]
+        },
+        "D05": {
+            "nome": "Descritor 5 - Geometria Plana",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Quantos lados tem um triângulo?",
+                    "alternativas": [
+                        "A) 2",
+                        "B) 3",
+                        "C) 4",
+                        "D) 5"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é a área de um retângulo de base 5 e altura 3?",
+                    "alternativas": [
+                        "A) 8",
+                        "B) 16",
+                        "C) 15",
+                        "D) 10"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Um quadrado tem lado 4. Qual é seu perímetro?",
+                    "alternativas": [
+                        "A) 8",
+                        "B) 12",
+                        "C) 16",
+                        "D) 20"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Qual forma geométrica tem todos os lados iguais e 4 lados?",
+                    "alternativas": [
+                        "A) Retângulo",
+                        "B) Triângulo",
+                        "C) Quadrado",
+                        "D) Trapézio"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "A soma dos ângulos internos de um triângulo é:",
+                    "alternativas": [
+                        "A) 90°",
+                        "B) 270°",
+                        "C) 360°",
+                        "D) 180°"
+                    ],
+                    "resposta": "D"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "A área de um triângulo de base 8 e altura 5 é:",
+                    "alternativas": [
+                        "A) 20",
+                        "B) 40",
+                        "C) 13",
+                        "D) 80"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Um círculo tem raio 7. Qual é sua área? (use π ≈ 3,14)",
+                    "alternativas": [
+                        "A) 21,98",
+                        "B) 43,96",
+                        "C) 153,86",
+                        "D) 49"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual é o ângulo que falta em um triângulo com ângulos de 60° e 80°?",
+                    "alternativas": [
+                        "A) 30°",
+                        "B) 40°",
+                        "C) 50°",
+                        "D) 60°"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Um trapézio tem bases 6 e 10 e altura 4. Qual a área?",
+                    "alternativas": [
+                        "A) 32",
+                        "B) 40",
+                        "C) 16",
+                        "D) 24"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual é o perímetro de um triângulo equilátero de lado 9?",
+                    "alternativas": [
+                        "A) 18",
+                        "B) 36",
+                        "C) 27",
+                        "D) 81"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "Em um triângulo retângulo, os catetos medem 6 e 8. Qual a hipotenusa?",
+                    "alternativas": [
+                        "A) 12",
+                        "B) 14",
+                        "C) 10",
+                        "D) 9"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "A área de um hexágono regular de lado 4 é (use raiz 3 ≈ 1,73):",
+                    "alternativas": [
+                        "A) 24",
+                        "B) 41,52",
+                        "C) 48",
+                        "D) 16"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Um polígono tem a soma dos ângulos internos igual a 1080°. Quantos lados tem?",
+                    "alternativas": [
+                        "A) 6",
+                        "B) 7",
+                        "C) 8",
+                        "D) 9"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Dois triângulos semelhantes têm lados correspondentes 3 e 5. A razão das áreas é:",
+                    "alternativas": [
+                        "A) 3/5",
+                        "B) 6/10",
+                        "C) 9/25",
+                        "D) 15/25"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "A diagonal de um quadrado de lado 5 mede (use raiz 2 ≈ 1,41):",
+                    "alternativas": [
+                        "A) 6,5",
+                        "B) 7,07",
+                        "C) 7,5",
+                        "D) 8"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        }
+    },
+    "Portugues": {
+        "D01": {
+            "nome": "Descritor 1 - Localizar informações no texto",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Leia: 'Ana mora em Recife e tem 14 anos.' Quantos anos tem Ana?",
+                    "alternativas": [
+                        "A) 12",
+                        "B) 13",
+                        "C) 14",
+                        "D) 15"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "No texto 'O gato pulou o muro às 8h', o que o gato fez?",
+                    "alternativas": [
+                        "A) Dormiu",
+                        "B) Comeu",
+                        "C) Pulou o muro",
+                        "D) Entrou pela janela"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "'O evento ocorrerá no dia 15 de agosto.' Quando ocorre o evento?",
+                    "alternativas": [
+                        "A) 14 de julho",
+                        "B) 15 de agosto",
+                        "C) 16 de setembro",
+                        "D) Não informa"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "'Carlos é médico e trabalha há 10 anos.' Qual a profissão de Carlos?",
+                    "alternativas": [
+                        "A) Engenheiro",
+                        "B) Professor",
+                        "C) Médico",
+                        "D) Advogado"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "No texto 'A loja fecha às 18h', que informação é dada?",
+                    "alternativas": [
+                        "A) Preço",
+                        "B) Local",
+                        "C) Horário de fechamento",
+                        "D) Endereço"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Leia: 'Apesar da chuva, o jogo foi realizado.' O que pode ser concluído?",
+                    "alternativas": [
+                        "A) O jogo foi cancelado",
+                        "B) A chuva impediu o jogo",
+                        "C) O jogo ocorreu mesmo com chuva",
+                        "D) Haverá outro jogo"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual palavra indica causa na frase: 'Ela chegou tarde porque o ônibus atrasou'?",
+                    "alternativas": [
+                        "A) tarde",
+                        "B) porque",
+                        "C) chegou",
+                        "D) ônibus"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "'Embora estudasse muito, não passou.' Qual é o sentido de 'embora'?",
+                    "alternativas": [
+                        "A) Conclusão",
+                        "B) Causa",
+                        "C) Concessão (contraste)",
+                        "D) Tempo"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Em 'A reunião durou três horas', a expressão sublinhada indica:",
+                    "alternativas": [
+                        "A) Lugar",
+                        "B) Modo",
+                        "C) Tempo/duração",
+                        "D) Causa"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual alternativa apresenta uma informação implícita de 'É proibido entrar com animais'?",
+                    "alternativas": [
+                        "A) Animais são perigosos",
+                        "B) Há animais no local",
+                        "C) Existe uma regra no lugar",
+                        "D) O local é um zoológico"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "O autor usa ironia quando diz que 'o político foi honestíssimo ao esconder os documentos'. O que isso indica?",
+                    "alternativas": [
+                        "A) Elogio sincero",
+                        "B) Crítica velada por meio da ironia",
+                        "C) Descrição literal",
+                        "D) Dúvida sobre os fatos"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Em um texto argumentativo, a tese é:",
+                    "alternativas": [
+                        "A) O exemplo dado no final",
+                        "B) A opinião que o autor defende",
+                        "C) O título do texto",
+                        "D) Os dados estatísticos"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "A intertextualidade ocorre quando:",
+                    "alternativas": [
+                        "A) Um texto cita ou referencia outro texto",
+                        "B) O texto tem muitos parágrafos",
+                        "C) O autor escreve em primeira pessoa",
+                        "D) O texto é longo e detalhado"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "A ambiguidade em 'Vi o ladrão com o binóculo' ocorre porque:",
+                    "alternativas": [
+                        "A) 'ladrão' tem dois significados",
+                        "B) Não se sabe quem tinha o binóculo",
+                        "C) 'vi' pode ser passado ou presente",
+                        "D) A frase está incompleta"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Em textos persuasivos, o autor usa argumentos para:",
+                    "alternativas": [
+                        "A) Apenas informar fatos",
+                        "B) Convencer o leitor de seu ponto de vista",
+                        "C) Contar uma história",
+                        "D) Descrever um lugar"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        },
+        "D02": {
+            "nome": "Descritor 2 - Inferência e interpretação",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Se alguém 'está com água na boca', isso significa que:",
+                    "alternativas": [
+                        "A) Está com sede",
+                        "B) Está com fome ou achou algo delicioso",
+                        "C) Está doente",
+                        "D) Está molhado"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "A expressão 'choveu canivete' significa:",
+                    "alternativas": [
+                        "A) Choveu objetos cortantes",
+                        "B) Choveu muito forte",
+                        "C) Não choveu nada",
+                        "D) O tempo estava nublado"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Quando um texto diz 'Pedro abriu um sorriso', a inferência é que Pedro:",
+                    "alternativas": [
+                        "A) Estava triste",
+                        "B) Ficou com raiva",
+                        "C) Ficou feliz ou aliviado",
+                        "D) Estava com dor"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O texto 'Silêncio! Prova em andamento.' indica que:",
+                    "alternativas": [
+                        "A) Está proibido entrar",
+                        "B) O local deve ficar quieto",
+                        "C) A prova acabou",
+                        "D) É uma festa"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Ao ler 'Procura-se: cachorro perdido, responde por Totó', podemos inferir que:",
+                    "alternativas": [
+                        "A) O cachorro é perigoso",
+                        "B) O dono perdeu o animal",
+                        "C) O cachorro foi encontrado",
+                        "D) O cachorro está à venda"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "No título 'Governo corta verbas da educação', a palavra 'corta' é usada em sentido:",
+                    "alternativas": [
+                        "A) Literal - cortou fisicamente",
+                        "B) Figurado - reduziu ou eliminou",
+                        "C) Irônico",
+                        "D) Técnico"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é a função da linguagem em 'Por favor, feche a janela'?",
+                    "alternativas": [
+                        "A) Expressar emoção",
+                        "B) Transmitir informação",
+                        "C) Solicitar uma ação (apelativa)",
+                        "D) Criar beleza estética"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Em 'As flores sorriram para o sol', a figura de linguagem é:",
+                    "alternativas": [
+                        "A) Metáfora",
+                        "B) Hipérbole",
+                        "C) Personificação",
+                        "D) Antítese"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "'Ela tem um coração de pedra.' Qual figura de linguagem é usada?",
+                    "alternativas": [
+                        "A) Comparação",
+                        "B) Metáfora",
+                        "C) Metonímia",
+                        "D) Hipérbole"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "'Eu te disse um milhão de vezes!' é um exemplo de:",
+                    "alternativas": [
+                        "A) Metáfora",
+                        "B) Antítese",
+                        "C) Hipérbole",
+                        "D) Eufemismo"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "A ironia difere do sarcasmo porque:",
+                    "alternativas": [
+                        "A) A ironia é sempre engraçada",
+                        "B) O sarcasmo tem intenção de ofender ou ridicularizar",
+                        "C) A ironia usa linguagem formal",
+                        "D) São sinônimos perfeitos"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Um texto com ponto de vista parcial tende a:",
+                    "alternativas": [
+                        "A) Apresentar todos os lados igualmente",
+                        "B) Favorecer uma perspectiva em detrimento de outra",
+                        "C) Ser sempre factual",
+                        "D) Nunca usar adjetivos"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "A conotação de 'raposa' em 'Aquele político é uma raposa' é:",
+                    "alternativas": [
+                        "A) Animal da floresta",
+                        "B) Pessoa veloz",
+                        "C) Pessoa astuta e maliciosa",
+                        "D) Pessoa bonita"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "A diferença entre denotação e conotação é que:",
+                    "alternativas": [
+                        "A) Denotação é o sentido figurado",
+                        "B) Conotação é o sentido literal do dicionário",
+                        "C) Denotação é o sentido literal e conotação é o sentido figurado/ampliado",
+                        "D) São a mesma coisa"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Em uma charge, a crítica social é feita principalmente por meio de:",
+                    "alternativas": [
+                        "A) Texto longo e detalhado",
+                        "B) Dados e estatísticas",
+                        "C) Imagem e ironia/humor",
+                        "D) Linguagem técnica e formal"
+                    ],
+                    "resposta": "C"
+                }
+            ]
+        },
+        "D03": {
+            "nome": "Descritor 3 - Coesão e Coerência",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Qual palavra liga corretamente as orações em 'Fui ao mercado ___ comprei frutas'?",
+                    "alternativas": [
+                        "A) mas",
+                        "B) porém",
+                        "C) e",
+                        "D) embora"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Na frase 'Ele estudou muito. Por isso, passou na prova.', 'Por isso' indica:",
+                    "alternativas": [
+                        "A) Contraste",
+                        "B) Consequência",
+                        "C) Tempo",
+                        "D) Lugar"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual alternativa NÃO é um pronome usado para retomar um termo?",
+                    "alternativas": [
+                        "A) ele",
+                        "B) isso",
+                        "C) aquele",
+                        "D) muito"
+                    ],
+                    "resposta": "D"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O uso de sinônimos em um texto serve para:",
+                    "alternativas": [
+                        "A) Confundir o leitor",
+                        "B) Evitar repetição e garantir coesão",
+                        "C) Mudar o tema",
+                        "D) Tornar o texto mais longo"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "A palavra 'todavia' tem sentido de:",
+                    "alternativas": [
+                        "A) Adição",
+                        "B) Causa",
+                        "C) Contraste/oposição",
+                        "D) Tempo"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Identifique o erro de coerência: 'O Brasil é um país tropical. Por isso, neva muito.'",
+                    "alternativas": [
+                        "A) 'tropical' está errado",
+                        "B) A conclusão contradiz a premissa",
+                        "C) Falta pontuação",
+                        "D) 'neva' está conjugado errado"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Em 'Comprei um livro. Ele estava em promoção.', o pronome 'Ele' retoma:",
+                    "alternativas": [
+                        "A) 'Comprei'",
+                        "B) 'promoção'",
+                        "C) 'livro'",
+                        "D) Não retoma nada"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual conector indica contraste entre duas ideias?",
+                    "alternativas": [
+                        "A) além disso",
+                        "B) portanto",
+                        "C) no entanto",
+                        "D) visto que"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O que é elipse em um texto?",
+                    "alternativas": [
+                        "A) Uso excessivo de adjetivos",
+                        "B) Omissão de um termo que pode ser subentendido",
+                        "C) Repetição proposital de palavras",
+                        "D) Uso de linguagem formal"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual frase apresenta erro de concordância?",
+                    "alternativas": [
+                        "A) Os alunos estudaram muito.",
+                        "B) A professora corrigiu as provas.",
+                        "C) Os livro estão na mesa.",
+                        "D) Ela chegou cedo."
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "A anáfora e a catáfora diferem porque:",
+                    "alternativas": [
+                        "A) São figuras de linguagem diferentes",
+                        "B) Anáfora retoma algo já dito; catáfora antecipa algo a ser dito",
+                        "C) Catáfora retoma e anáfora antecipa",
+                        "D) São a mesma figura"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Um texto coeso mas incoerente é aquele que:",
+                    "alternativas": [
+                        "A) Tem boa gramática mas ideias contraditórias",
+                        "B) Tem erros gramaticais mas faz sentido",
+                        "C) Não usa conectivos",
+                        "D) É muito longo"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "A progressão temática de um texto refere-se à:",
+                    "alternativas": [
+                        "A) Repetição do mesmo assunto",
+                        "B) Forma como o texto avança e desenvolve suas ideias",
+                        "C) Uso de vocabulário difícil",
+                        "D) Número de parágrafos"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O uso de 'embora' exige que o verbo seguinte esteja no:",
+                    "alternativas": [
+                        "A) Indicativo",
+                        "B) Infinitivo",
+                        "C) Subjuntivo",
+                        "D) Imperativo"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual recurso de coesão é usado em 'Comprei uma bicicleta. O veículo estava barato'?",
+                    "alternativas": [
+                        "A) Pronome",
+                        "B) Sinônimo/hipônimo",
+                        "C) Elipse",
+                        "D) Conjunção"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        },
+        "D04": {
+            "nome": "Descritor 4 - Gêneros Textuais",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Qual é o objetivo principal de uma notícia?",
+                    "alternativas": [
+                        "A) Entreter o leitor",
+                        "B) Convencer o leitor",
+                        "C) Informar sobre um fato recente",
+                        "D) Ensinar algo"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Uma carta pessoal difere de uma carta formal porque:",
+                    "alternativas": [
+                        "A) A carta pessoal é mais longa",
+                        "B) A carta pessoal usa linguagem informal e íntima",
+                        "C) A carta formal não tem destinatário",
+                        "D) A carta pessoal não tem assinatura"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Um poema se diferencia da prosa principalmente por:",
+                    "alternativas": [
+                        "A) Ser mais longo",
+                        "B) Ter versos, rimas e ritmo",
+                        "C) Sempre contar uma história",
+                        "D) Ser sempre triste"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "A receita culinária é um exemplo de texto:",
+                    "alternativas": [
+                        "A) Narrativo",
+                        "B) Argumentativo",
+                        "C) Injuntivo (instrucional)",
+                        "D) Poético"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "O objetivo de um editorial de jornal é:",
+                    "alternativas": [
+                        "A) Narrar um acontecimento",
+                        "B) Expressar a opinião do veículo sobre um assunto",
+                        "C) Ensinar uma habilidade",
+                        "D) Divertir os leitores"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Qual elemento NÃO faz parte de um conto?",
+                    "alternativas": [
+                        "A) Personagens",
+                        "B) Conflito",
+                        "C) Referências bibliográficas",
+                        "D) Narrador"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "A crônica jornalística se caracteriza por:",
+                    "alternativas": [
+                        "A) Ser longa e técnica",
+                        "B) Abordar fatos do cotidiano com humor ou reflexão",
+                        "C) Apresentar apenas dados estatísticos",
+                        "D) Ser sempre em verso"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "O que diferencia um artigo científico de uma reportagem?",
+                    "alternativas": [
+                        "A) O artigo científico é mais curto",
+                        "B) A reportagem usa linguagem mais técnica",
+                        "C) O artigo científico exige metodologia e embasamento teórico",
+                        "D) São gêneros idênticos"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Em um debate, o argumento mais eficaz é aquele que:",
+                    "alternativas": [
+                        "A) É o mais longo",
+                        "B) Usa palavras difíceis",
+                        "C) É baseado em evidências e lógica",
+                        "D) Critica o oponente pessoalmente"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "A linguagem de um contrato é predominantemente:",
+                    "alternativas": [
+                        "A) Coloquial e informal",
+                        "B) Poética e emotiva",
+                        "C) Técnica, formal e precisa",
+                        "D) Humorística"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "A diferença entre gênero textual e tipo textual é que:",
+                    "alternativas": [
+                        "A) São sinônimos",
+                        "B) Gênero é a forma social de uso; tipo é a estrutura (narrativo, descritivo etc.)",
+                        "C) Tipo é mais específico que gênero",
+                        "D) Gênero é sempre literário"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "A multimodalidade em textos refere-se ao uso de:",
+                    "alternativas": [
+                        "A) Muitos parágrafos",
+                        "B) Diferentes linguagens (imagem, som, texto) no mesmo gênero",
+                        "C) Vocabulário variado",
+                        "D) Múltiplos autores"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "O gênero 'meme' se enquadra como:",
+                    "alternativas": [
+                        "A) Gênero literário clássico",
+                        "B) Gênero digital com humor e crítica social",
+                        "C) Gênero jornalístico formal",
+                        "D) Gênero científico"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "A intertextualidade em um romance que referencia a Bíblia é um exemplo de:",
+                    "alternativas": [
+                        "A) Plágio",
+                        "B) Ironia estrutural",
+                        "C) Referência cultural consciente e dialogismo",
+                        "D) Coesão textual"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "O que caracteriza o narrador onisciente?",
+                    "alternativas": [
+                        "A) Ele é também personagem da história",
+                        "B) Ele sabe tudo sobre os personagens e a trama",
+                        "C) Ele narra em primeira pessoa",
+                        "D) Ele não conhece os personagens"
+                    ],
+                    "resposta": "B"
+                }
+            ]
+        },
+        "D05": {
+            "nome": "Descritor 5 - Ortografia e Gramática",
+            "facil": [
+                {
+                    "id": 1,
+                    "enunciado": "Qual palavra está escrita corretamente?",
+                    "alternativas": [
+                        "A) enfrentar",
+                        "B) imfrentar",
+                        "C) anfrentar",
+                        "D) infrêntar"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual alternativa usa corretamente o 'porquê'?",
+                    "alternativas": [
+                        "A) Não sei por que ela foi.",
+                        "B) Não sei porquê ela foi.",
+                        "C) Não sei porquê ela saiu.",
+                        "D) Não sei por quê ela foi."
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual frase usa vírgula corretamente?",
+                    "alternativas": [
+                        "A) Ela foi ao mercado, e comprou frutas.",
+                        "B) Ela foi ao mercado e comprou, frutas.",
+                        "C) Ela foi, ao mercado e comprou frutas.",
+                        "D) Ela foi ao mercado e comprou frutas."
+                    ],
+                    "resposta": "D"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O plural de 'cidadão' é:",
+                    "alternativas": [
+                        "A) cidadãos",
+                        "B) cidadões",
+                        "C) cidadães",
+                        "D) cidadãos ou cidadões"
+                    ],
+                    "resposta": "D"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual é o antônimo de 'alegria'?",
+                    "alternativas": [
+                        "A) Felicidade",
+                        "B) Euforia",
+                        "C) Tristeza",
+                        "D) Animação"
+                    ],
+                    "resposta": "C"
+                }
+            ],
+            "medio": [
+                {
+                    "id": 1,
+                    "enunciado": "Em 'O menino que estuda passa de ano', a oração 'que estuda' é:",
+                    "alternativas": [
+                        "A) Oração principal",
+                        "B) Oração subordinada adjetiva",
+                        "C) Oração coordenada",
+                        "D) Oração subordinada adverbial"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "Qual é o sujeito de 'Foram encontradas as chaves'?",
+                    "alternativas": [
+                        "A) 'Foram'",
+                        "B) 'encontradas'",
+                        "C) 'as chaves'",
+                        "D) A oração não tem sujeito"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Em 'Ela mesma resolveu o problema', 'mesma' é um pronome:",
+                    "alternativas": [
+                        "A) Demonstrativo",
+                        "B) Relativo",
+                        "C) Reflexivo/enfático",
+                        "D) Indefinido"
+                    ],
+                    "resposta": "C"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "Qual alternativa apresenta uso correto da crase?",
+                    "alternativas": [
+                        "A) Fui à escola.",
+                        "B) Fui à comprar pão.",
+                        "C) Ele veio à pé.",
+                        "D) Ela respondeu à ele."
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "O verbo 'fazer' em 'Faz dois anos que não o vejo' está no sentido de:",
+                    "alternativas": [
+                        "A) Fabricar algo",
+                        "B) Indicar tempo decorrido (impessoal)",
+                        "C) Realizar uma ação",
+                        "D) Completar uma tarefa"
+                    ],
+                    "resposta": "B"
+                }
+            ],
+            "dificil": [
+                {
+                    "id": 1,
+                    "enunciado": "Em 'Se eu tivesse estudado, teria passado', o modo verbal é:",
+                    "alternativas": [
+                        "A) Indicativo em ambas",
+                        "B) Subjuntivo e condicional",
+                        "C) Imperativo e subjuntivo",
+                        "D) Infinitivo e indicativo"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 2,
+                    "enunciado": "A regência de 'assistir' no sentido de ver exige:",
+                    "alternativas": [
+                        "A) Objeto direto (sem preposição)",
+                        "B) Objeto indireto com 'a'",
+                        "C) Objeto indireto com 'de'",
+                        "D) Nenhum complemento"
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 3,
+                    "enunciado": "Qual frase apresenta ambiguidade sintática?",
+                    "alternativas": [
+                        "A) Ela comprou um livro.",
+                        "B) Vi o homem com o telescópio.",
+                        "C) O gato comeu o peixe.",
+                        "D) Ela saiu cedo."
+                    ],
+                    "resposta": "B"
+                },
+                {
+                    "id": 4,
+                    "enunciado": "O uso do hífen é obrigatório em:",
+                    "alternativas": [
+                        "A) anti-inflamatório",
+                        "B) antiácido",
+                        "C) coautor",
+                        "D) reescrever"
+                    ],
+                    "resposta": "A"
+                },
+                {
+                    "id": 5,
+                    "enunciado": "Qual alternativa apresenta erro de paralelismo sintático?",
+                    "alternativas": [
+                        "A) Ela gosta de ler, escrever e desenhar.",
+                        "B) Ele prefere correr, nadar e pedalar.",
+                        "C) Preciso estudar, descansar e que durma cedo.",
+                        "D) Quero viajar, conhecer e aprender."
+                    ],
+                    "resposta": "C"
+                }
+            ]
+        }
+    }
+}
