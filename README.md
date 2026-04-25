@@ -1,10 +1,10 @@
-# 📚 MonitorAê — Plataforma Educacional 
+#  MonitorAê — Plataforma Educacional 
 
 > Conectando alunos e monitores de forma simples, direto pelo terminal.
 
 ---
 
-## 📋 Sobre o projeto
+##  Sobre o projeto
 
 O **MonitorAê** é uma plataforma educacional desenvolvida em Python que roda **inteiramente no terminal de comando**. Ele permite que alunos e monitores se cadastrem, se encontrem e pratiquem conteúdos de Matemática e Português por meio de questões organizadas por descritores e níveis de dificuldade.
 
@@ -12,7 +12,7 @@ O projeto nasceu com o objetivo de ajudar os alunos de escolas públicas estadua
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 ### Tela Inicial
 - **Login** — Aluno ou Monitor (com verificação de ID extra para monitores)
@@ -50,7 +50,7 @@ Após fazer login, o usuário vê a saudação `Olá, {nome}! 👋` e acessa:
 
 ---
 
-## 🗂️ Estrutura de Pastas
+##  Estrutura de Pastas
 
 ```
 monitora_ae/
@@ -83,7 +83,7 @@ monitora_ae/
 
 ---
 
-## ⚙️ Como executar
+##  Como executar
 
 ### Pré-requisitos
 - Python **3.8** ou superior
@@ -106,7 +106,7 @@ python app.py
 
 ---
 
-## 🔐 Regras de Cadastro
+##  Regras de Cadastro
 
 Todas as validações ficam centralizadas em `validacoes/validadores.py`, o que facilita encontrar e alterar qualquer restrição.
 
@@ -140,7 +140,7 @@ Todas as validações ficam centralizadas em `validacoes/validadores.py`, o que 
 
 ---
 
-## 🗃️ Banco de Dados
+##  Banco de Dados
 
 O sistema usa arquivos **JSON** como banco de dados local — sem necessidade de instalar nenhum banco de dados externo.
 
@@ -204,7 +204,7 @@ Banco com 150 questões organizadas por matéria, descritor e dificuldade. Você
 
 ---
 
-## 🧩 Como o código está organizado
+##  Como o código está organizado
 
 O projeto usa alguns conceitos de **Programação Orientada a Objetos (POO)**:
 
@@ -217,7 +217,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-## 🛠️ Personalizações rápidas
+##  Personalizações rápidas
 
 | O que mudar | Onde mexer |
 |---|---|
@@ -229,7 +229,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-## 👥 Tipos de usuário
+##  Tipos de usuário
 
 ### Aluno
 - Cadastra-se com nome, escola, e-mail e senha
@@ -242,7 +242,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-## 📌 Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - **Python 3** — linguagem principal
 - **JSON** — armazenamento de dados
@@ -251,7 +251,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-## 🚀 Próximas melhorias
+##  Próximas melhorias
 
 - [ ] Sistema de **Ranking** de Monitores e Alunos
 - [ ] Histórico de questões respondidas por usuário
