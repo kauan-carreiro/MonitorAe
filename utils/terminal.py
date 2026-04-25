@@ -1,6 +1,8 @@
 import os
 import sys
-
+from utils.emojis import(
+    AVISO,CHECK,INFO,LIVRO,
+)
 
 # ── Códigos de cor ANSI ──────────────────────────────────────────────────────
 # Esses são códigos especiais que mudam a cor do texto no terminal.
@@ -36,7 +38,7 @@ def titulo(texto):
     Imprime um bloco de título formatado.
     Exemplo:
       ───────────────────────────────────────────────────────
-       📚 MONITOR AÊ
+        MONITOR AÊ
       ───────────────────────────────────────────────────────
     """
     linha()
@@ -56,21 +58,21 @@ def sucesso(mensagem):
     """
     Imprime uma mensagem de sucesso em verde.
     """
-    print(f"\n{VERDE}  ✅ {mensagem}{RESET}")
+    print(f"\n{VERDE}  {CHECK} {mensagem}{RESET}")
 
 
 def erro(mensagem):
     """
     Imprime uma mensagem de erro em vermelho.
     """
-    print(f"\n{VERMELHO}  ⚠️  {mensagem}{RESET}")
+    print(f"\n{VERMELHO}  {AVISO}  {mensagem}{RESET}")
 
 
 def info(mensagem):
     """
     Imprime uma mensagem informativa em azul.
     """
-    print(f"{AZUL}  ℹ️  {mensagem}{RESET}")
+    print(f"{AZUL}  {INFO}  {mensagem}{RESET}")
 
 
 def imprimir_menu(opcoes):
@@ -225,6 +227,6 @@ def cabecalho_app():
     limpar_tela()
     print()
     linha("═")
-    print(f"{AMARELO}{NEGRITO}  📚  MONITORAÊ — Plataforma Educacional{RESET}")
+    print(f"{AMARELO}{NEGRITO}{LIVRO}  MONITORAÊ — Plataforma Educacional{RESET}")
     linha("═")
     print()

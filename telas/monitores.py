@@ -1,12 +1,14 @@
+from utils.usuarios import listar_monitores
+from validacoes.validadores import MATERIAS_PERMITIDAS, ESCOLAS_PERMITIDAS
 from utils.terminal import (
     cabecalho_app, titulo, linha,
     imprimir_menu, pedir_opcao, pedir_texto,
     escolher_da_lista, info,
     AMARELO, CINZA, AZUL, RESET, NEGRITO
 )
-from utils.usuarios import listar_monitores
-from validacoes.validadores import MATERIAS_PERMITIDAS, ESCOLAS_PERMITIDAS
- 
+from utils.emojis import (
+    LUPA, ESCOLA, CADERNO
+)
  
 class TelaMonitores:
     """
@@ -28,7 +30,7 @@ class TelaMonitores:
         
         while True:
             cabecalho_app()
-            titulo("🔍  MONITORES CADASTRADOS")
+            titulo(f"{LUPA}  MONITORES CADASTRADOS")
             
             # Pega todos os monitores
             todos_monitores = listar_monitores()
@@ -114,7 +116,7 @@ class TelaMonitores:
             ativos.append(f"Nome contém: '{nome}'")
         
         if ativos:
-            print(f"  {AZUL}🔎 Filtros ativos: {' | '.join(ativos)}{RESET}")
+            print(f"  {AZUL}{LUPA} Filtros ativos: {' | '.join(ativos)}{RESET}")
         else:
             print(f"  {CINZA}(Sem filtros — exibindo todos os monitores){RESET}")
     
@@ -138,7 +140,7 @@ class TelaMonitores:
             inicial = nome[0].upper() if nome else "?"
             
             print(f"\n  {AMARELO}{NEGRITO}[{i}] {inicial} — {nome}{RESET}")
-            print(f"  {CINZA}    🏫 {escola}{RESET}")
-            print(f"  {CINZA}    📖 Matéria: {RESET}{AMARELO}{materia}{RESET}")
+            print(f"  {CINZA}    {ESCOLA} {escola}{RESET}")
+            print(f"  {CINZA}    {CADERNO} Matéria: {RESET}{AMARELO}{materia}{RESET}")
             linha("─", 55)
  

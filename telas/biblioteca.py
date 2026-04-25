@@ -1,8 +1,3 @@
-# =============================================================================
-# A biblioteca de questões é onde o aluno pode estudar os descritores.
-# O conteúdo é carregado do arquivo banco_questoes.json.
-# =============================================================================
-
 import json
 import os
 
@@ -12,6 +7,16 @@ from utils.terminal import (
     erro, pausar,
     AMARELO, VERDE, VERMELHO, CINZA, RESET, NEGRITO
 )
+from utils.emojis import (
+    LIVRO, CADERNO, ROSTO_FELIZ, ROSTO_NEU, ROSTO_PUTO,
+    CHECK,ESTRELA, ERRADO, RAIO, TROFEU, ACENO
+)      
+# =============================================================================
+# A biblioteca de questões é onde o aluno pode estudar os descritores.
+# O conteúdo é carregado do arquivo banco_questoes.json.
+# =============================================================================
+
+
 
 # Caminho até o banco de questões
 PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
@@ -43,7 +48,7 @@ class TelaBiblioteca:
     def mostrar(self):
         while True:
             cabecalho_app()
-            titulo("📚  BIBLIOTECA")
+            titulo(f"{LIVRO}  BIBLIOTECA")
             
             print(f"  {CINZA}Escolha uma matéria para estudar:{RESET}\n")
             imprimir_menu(["Matemática", "Português", "---", "Voltar"])
@@ -78,7 +83,7 @@ class TelaBiblioteca:
         
         while True:
             cabecalho_app()
-            titulo(f"📘  {nome_exibido.upper()} — DESCRITORES")
+            titulo(f"{CADERNO}  {nome_exibido.upper()} — DESCRITORES")
             
             # Calcula quais descritores mostrar nesta página
             inicio = pagina_atual
@@ -126,10 +131,10 @@ class TelaBiblioteca:
         Exibe as opções de dificuldade para um descritor.
         """
         cabecalho_app()
-        titulo(f"⚡  {dados_descritor['nome']}")
+        titulo(f"{RAIO}  {dados_descritor['nome']}")
         
         print(f"  {CINZA}Escolha o nível de dificuldade:{RESET}\n")
-        imprimir_menu(["😊 Fácil", "😐 Médio", "😤 Difícil", "---", "Voltar"])
+        imprimir_menu([f"{ROSTO_FELIZ} Fácil", f"{ROSTO_NEU} Médio", f"{ROSTO_PUTO} Difícil", "---", "Voltar"])
         
         opcao = pedir_opcao(4)
         
@@ -157,7 +162,7 @@ class TelaBiblioteca:
         total   = len(questoes)
         
         # Níveis de questões
-        nivel_bonito = {"facil": "Fácil 😊", "medio": "Médio 😐", "dificil": "Difícil 😤"}
+        nivel_bonito = {"facil": f"Fácil {ROSTO_FELIZ}", "medio": f"Médio {ROSTO_NEU}", "dificil": f"Difícil {ROSTO_PUTO}"}
         
         for i, questao in enumerate(questoes, start=1):
             cabecalho_app()
@@ -185,9 +190,9 @@ class TelaBiblioteca:
             correta = questao["resposta"].upper()
             if resposta == correta:
                 acertos += 1
-                print(f"\n  {VERDE}✅ Correto!{RESET}")
+                print(f"\n  {VERDE}{CHECK} Correto!{RESET}")
             else:
-                print(f"\n  {VERMELHO}❌ Errado! A resposta correta era: {correta}{RESET}")
+                print(f"\n  {VERMELHO}{ERRADO} Errado! A resposta correta era: {correta}{RESET}")
             
             # Pausa entre questões (menos na última)
             if i < total:
@@ -195,7 +200,7 @@ class TelaBiblioteca:
         
         # ── Resultado Final ────────────────────────────────────────────
         cabecalho_app()
-        titulo("🏆  RESULTADO")
+        titulo(f"{TROFEU}  RESULTADO")
         
         porcentagem = (acertos / total) * 100
         
@@ -206,10 +211,10 @@ class TelaBiblioteca:
         
         # Mensagem de acordo com o desempenho
         if porcentagem >= 80:
-            print(f"  {VERDE}🌟 Excelente! Continue assim!{RESET}")
+            print(f"  {VERDE}{ESTRELA} Excelente! Continue assim!{RESET}")
         elif porcentagem >= 60:
-            print(f"  {AMARELO}👍 Bom trabalho! Ainda há espaço para melhorar.{RESET}")
+            print(f"  {AMARELO}{ACENO} Bom trabalho! Ainda há espaço para melhorar.{RESET}")
         else:
-            print(f"  {VERMELHO}📖 Revise o conteúdo e tente novamente!{RESET}")
+            print(f"  {VERMELHO}{CADERNO} Revise o conteúdo e tente novamente!{RESET}")
         
         pausar()

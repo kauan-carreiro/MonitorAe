@@ -1,15 +1,17 @@
-# =============================================================================
-# Tela que mostra outros alunos da mesma escola do usuário logado.
-# =============================================================================
-
 from utils.terminal import (
     cabecalho_app, titulo, linha,
     imprimir_menu, pedir_opcao,
     info, pausar,
     AMARELO, CINZA, RESET, NEGRITO
 )
+from utils.emojis import (
+    ESCOLA
+)
 from utils.usuarios import listar_alunos_mesma_escola
 
+# =============================================================================
+# Tela que mostra outros alunos da mesma escola do usuário logado.
+# =============================================================================
 
 class TelaAlunosProximos:
     """
@@ -22,7 +24,7 @@ class TelaAlunosProximos:
     
     def mostrar(self):
         cabecalho_app()
-        titulo("🏫  ALUNOS DA MESMA ESCOLA")
+        titulo(f"{ESCOLA}  ALUNOS DA MESMA ESCOLA")
         
         escola     = self.usuario.get("escola", "")
         email_meu  = self.usuario.get("email", "")
@@ -47,7 +49,7 @@ class TelaAlunosProximos:
                 inicial = nome[0].upper() if nome else "?"
                 
                 print(f"\n  {NEGRITO}[{i}] {inicial} — {nome}{RESET}")
-                print(f"  {CINZA}    🏫 {escola}{RESET}")
+                print(f"  {CINZA}    {ESCOLA} {escola}{RESET}")
                 linha("─", 50)
         
         print()

@@ -1,12 +1,14 @@
+from utils.usuarios import remover_usuario
 from utils.terminal import (
     cabecalho_app, titulo, linha,
     imprimir_menu, pedir_opcao, pedir_texto,
     sucesso, erro, info, pausar, confirmar,
     AMARELO, VERDE, VERMELHO, CINZA, AZUL, RESET, NEGRITO
 )
-from utils.usuarios import remover_usuario
- 
- 
+from utils.emojis import (
+    PESSOA, ESCOLA, CARTA, CADERNO, CRACHA, GRAFICO, AVISO,
+)
+
 class TelaPerfil:
     """
     Exibe o perfil do usuário e opções como deletar conta.
@@ -23,7 +25,7 @@ class TelaPerfil:
         """
         while True:
             cabecalho_app()
-            titulo("👤  MEU PERFIL")
+            titulo(f"{PESSOA}  MEU PERFIL")
             
             self._exibir_dados()
             
@@ -59,14 +61,14 @@ class TelaPerfil:
         
         # Campos
         campos = [
-            ("✉️ ", "E-mail",    u.get("email",  "—")),
-            ("🏫", "Escola",    u.get("escola", "—")),
+            (f"{CARTA}", "E-mail",    u.get("email",  "—")),
+            (f"{ESCOLA}", "Escola",    u.get("escola", "—")),
         ]
         
         # Se for monitor, adiciona matéria e ID
         if tipo == "Monitor":
-            campos.append(("📖", "Matéria",   u.get("materia", "—")))
-            campos.append(("🪪", "ID Monitor", u.get("id", "—")))
+            campos.append((f"{CADERNO}", "Matéria",   u.get("materia", "—")))
+            campos.append((f"{CRACHA}", "ID Monitor", u.get("id", "—")))
         
         for icone, label, valor in campos:
             print(f"  {icone}  {CINZA}{label}:{RESET}  {valor}")
@@ -74,10 +76,10 @@ class TelaPerfil:
         linha("─", 48)
         
         # Estatísticas mockadas (placeholder para expansão futura)
-        print(f"\n  {AMARELO}📊 Estatísticas{RESET}")
-        print(f"  {CINZA}Questões respondidas:{RESET}  0")
-        print(f"  {CINZA}Taxa de acerto:{RESET}       —")
-        print(f"  {CINZA}Nível:{RESET}                Iniciante")
+        print(f"\n  {AMARELO}{GRAFICO} Estatísticas{RESET}")
+        print(f"  {CINZA}Questões respondidas:{RESET}  {AVISO} EM BREVE {AVISO}")
+        print(f"  {CINZA}Taxa de acerto:{RESET}        {AVISO} EM BREVE {AVISO}")
+        print(f"  {CINZA}Nível:{RESET}                 {AVISO} EM BREVE {AVISO}")
     
     def _deletar_conta(self):
         """
@@ -85,7 +87,7 @@ class TelaPerfil:
         Retorna True se a conta foi deletada (para deslogar).
         Retorna False se o usuário cancelou.
         """
-        print(f"\n  {VERMELHO}⚠️  ATENÇÃO: Esta ação é irreversível!{RESET}")
+        print(f"\n  {VERMELHO}{AVISO}  ATENÇÃO: Esta ação é irreversível!{RESET}")
         print(f"  {CINZA}Sua conta e todos os seus dados serão removidos.{RESET}")
         
         if not confirmar("Tem certeza que deseja deletar sua conta?"):

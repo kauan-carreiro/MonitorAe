@@ -5,6 +5,9 @@ from utils.terminal import (
     cabecalho_app, titulo, linha, imprimir_menu,
     pedir_opcao, AMARELO, CINZA, RESET, NEGRITO,
 )
+from utils.emojis import (
+    ACENO, CASA, CHAPEU,
+)
  
  
 def tela_inicial(router):
@@ -16,10 +19,10 @@ def tela_inicial(router):
     """
     while True:
         cabecalho_app()
-        titulo("🏠  TELA INICIAL")
+        titulo(f"{CASA}  TELA INICIAL")
         
         print(f"  {CINZA}Bem-vindo(a) ao MonitorAê!{RESET}")
-        print(f"  {CINZA}Conectando alunos e monitores. 🎓{RESET}\n")
+        print(f"  {CINZA}Conectando alunos e monitores. {CHAPEU}{RESET}\n")
         
         imprimir_menu([
             "Entrar na conta",
@@ -43,7 +46,7 @@ def tela_inicial(router):
         elif opcao == 4:
             # Encerra o programa
             cabecalho_app()
-            print(f"\n  {AMARELO}{NEGRITO}Até logo! 👋{RESET}")
+            print(f"\n  {AMARELO}{NEGRITO}Até logo! {ACENO}{RESET}")
             print(f"  {CINZA}Obrigado por usar o MonitorAê.{RESET}\n")
             linha()
             break
@@ -67,11 +70,9 @@ def main():
 
     try:
         tela_inicial(router)
-    except KeyboardInterrupt:
-        # KeyboardInterrupt é lançado quando o usuário pressiona Ctrl+C
-        print(f"\n\n  {AMARELO}Programa encerrado pelo usuário. Até logo! 👋{RESET}\n")
+    except KeyboardInterrupt:   # Lançado quando o usuário pressiona Ctrl+C
+        print(f"\n\n  {AMARELO}Programa encerrado pelo usuário. Até logo! {ACENO}{RESET}\n")
  
  
-
 if __name__ == "__main__":
     main()

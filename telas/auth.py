@@ -7,6 +7,9 @@ from utils.terminal import (
 from utils.usuarios import (
     adicionar_usuario, buscar_usuario, buscar_por_email, atualizar_senha
 )
+from utils.emojis import (
+    CADEADO, CARTA, CONTRATO, CHAVE
+)
 from validacoes.validadores import (
     validar_nome, validar_email, validar_senha,
     validar_id_monitor,
@@ -28,7 +31,7 @@ class TelaLogin:
         Exibe a tela de login e processa a escolha do usuário.
         """
         cabecalho_app()
-        titulo("🔐  ENTRAR NA CONTA")
+        titulo(f"{CADEADO}  ENTRAR NA CONTA")
         
         print(f"\n  {CINZA}Escolha seu tipo de perfil:{RESET}\n")
         imprimir_menu(["Aluno", "Monitor", "---", "Voltar"])
@@ -47,7 +50,7 @@ class TelaLogin:
         Realiza o login para o tipo de usuário especificado.
         """
         cabecalho_app()
-        titulo(f"🔐  LOGIN — {tipo.upper()}")
+        titulo(f"{CADEADO}  LOGIN — {tipo.upper()}")
         
         # Coleta os dados
         email = pedir_texto("E-mail")
@@ -98,7 +101,7 @@ class TelaCadastro:
         Exibe o menu de cadastro (Aluno, Monitor ou Voltar).
         """
         cabecalho_app()
-        titulo("📝  CRIAR CONTA")
+        titulo(f"{CONTRATO}  CRIAR CONTA")
         
         print(f"\n  {CINZA}Qual tipo de conta deseja criar?{RESET}\n")
         imprimir_menu(["Aluno", "Monitor", "---", "Voltar"])
@@ -117,7 +120,7 @@ class TelaCadastro:
         Coleta os dados e valida para cadastro de Aluno.
         """
         cabecalho_app()
-        titulo("📝  CADASTRO — ALUNO")
+        titulo(f"{CONTRATO}  CADASTRO — ALUNO")
         
         print(f"  {CINZA}Preencha os campos abaixo. Todos são obrigatórios.{RESET}\n")
         
@@ -183,7 +186,7 @@ class TelaCadastro:
         Além dos campos do Aluno, o monitor precisa de: matéria e ID.
         """
         cabecalho_app()
-        titulo("📝  CADASTRO — MONITOR")
+        titulo(f"{CONTRATO}  CADASTRO — MONITOR")
         
         print(f"  {CINZA}Preencha os campos abaixo. Todos são obrigatórios.{RESET}\n")
         
@@ -289,7 +292,7 @@ class TelaRedefinirSenha:
         Exibe o fluxo de redefinição de senha.
         """
         cabecalho_app()
-        titulo("🔑  REDEFINIR SENHA")
+        titulo(f"{CHAVE}  REDEFINIR SENHA")
         
         print(f"  {CINZA}Para redefinir sua senha, confirme seus dados.{RESET}\n")
         

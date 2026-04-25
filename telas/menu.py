@@ -3,6 +3,9 @@ from utils.terminal import (
     imprimir_menu, pedir_opcao,
     AMARELO, CINZA, RESET, NEGRITO
 )
+from utils.emojis import (
+    ACENO, PESSOA, LUPA, ESCOLA, PORTA, LIVRO
+)
 from telas.perfil          import TelaPerfil
 from telas.monitores       import TelaMonitores
 from telas.alunos_proximos import TelaAlunosProximos
@@ -30,19 +33,19 @@ class TelaMenu:
             primeiro_nome = self.usuario.get("nome", "Usuário").split()[0]
             tipo          = self.usuario.get("tipo", "Aluno")
             
-            print(f"  {AMARELO}{NEGRITO}Olá, {primeiro_nome}! 👋{RESET}")
+            print(f"  {AMARELO}{NEGRITO}Olá, {primeiro_nome}! {ACENO}{RESET}")
             print(f"  {CINZA}Você está logado como {tipo}.{RESET}")
             print(f"  {CINZA}O que deseja fazer hoje?{RESET}\n")
             
             linha()
             
             imprimir_menu([
-                "👤  Meu Perfil",
-                "🔍  Monitores",
-                "🏫  Alunos Próximos (mesma escola)",
-                "📚  Biblioteca de Questões",
+                f"{PESSOA}  Meu Perfil",
+                f"{LUPA}  Monitores",
+                f"{ESCOLA}  Alunos Próximos (mesma escola)",
+                f"{LIVRO}  Biblioteca de Questões",
                 "---",
-                "🚪  Sair da conta"
+                f"{PORTA}  Sair da conta"
             ])
             
             opcao = pedir_opcao(5)
