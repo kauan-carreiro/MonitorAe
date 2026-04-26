@@ -10,9 +10,6 @@ from utils.usuarios import (
 from utils.emojis import (
     CADEADO, CARTA, CONTRATO, CHAVE
 )
-from utils.emojis import (
-    CADEADO, CARTA, CONTRATO, CHAVE
-)
 from validacoes.validadores import (
     validar_nome, validar_email, validar_senha,
     validar_id_monitor,
@@ -159,11 +156,21 @@ class TelaCadastro:
                 break
             erro(resultado)
         
-        while True:
-            confirmar_senha = pedir_texto("Confirmar senha", senha=True)
-            if senha == confirmar_senha:
+        TENTATIVAS_MAX = 3
+        for tentativa in range(TENTATIVAS_MAX):
+            confirmar_s = pedir_texto("Confirmar senha", senha=True)
+            if senha == confirmar_s:
                 break
-            erro("As senhas não coincidem. Tente novamente.")
+            tentativas_restantes = TENTATIVAS_MAX - tentativa - 1
+            if tentativas_restantes > 0:
+                erro(f"Senha incorreta.{tentativas_restantes} tentativa(s) restante(s).")
+            else:
+                erro("Número máximo de tentativas atingido. Voltando ao cadastro...")
+                pausar(
+                    "  Pressione ENTER para tentar novamente..."
+                )
+                return  # Volta para o início do cadastro
+            
         
         # ── Montar dicionário do usuário ──────────────────────────────
         novo_usuario = {
@@ -240,12 +247,20 @@ class TelaCadastro:
             if resultado is True:
                 break
             erro(resultado)
-        
-        while True:
+        TENTATIVAS_MAX = 3
+        for tentativa in range(TENTATIVAS_MAX):
             confirmar_s = pedir_texto("Confirmar senha", senha=True)
             if senha == confirmar_s:
                 break
-            erro("As senhas não coincidem. Tente novamente.")
+            tentativas_restantes = TENTATIVAS_MAX - tentativa - 1
+            if tentativas_restantes > 0:
+                erro(f"Senha incorreta.{tentativas_restantes} tentativa(s) restante(s).")
+            else:
+                erro("Número máximo de tentativas atingido. Voltando ao cadastro...")
+                pausar(
+                    "  Pressione ENTER para tentar novamente..."
+                )
+                return  # Volta para o início do cadastro
         
         # ── Montar dicionário ─────────────────────────────────────────
         novo_usuario = {
