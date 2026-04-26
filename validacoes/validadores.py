@@ -109,7 +109,7 @@ def validar_escola(escola):
 
 
 # ── Validação de ID de monitor ───────────────────────────────────────────────
-def validar_id_monitor(id_digitado):
+def validar_id_monitor(id_digitado, usuarios_cadastrados=None):
     """
     Verifica se o ID de monitor existe no arquivo de IDs válidos.
     O arquivo fica em: data/ids_validos.json
@@ -122,10 +122,14 @@ def validar_id_monitor(id_digitado):
     try:
         with open(caminho, "r", encoding="utf-8") as f:
             dados = json.load(f)
-        if id_digitado in dados["ids"]:
-            return True
-        else:
-            return "ID de monitoria inválido. Verifique o ID fornecido pela instituição."
+        if id_digitado not in dados["ids"]:
+            return "ID de monitor inválido. Verifique o ID fornecido pela instituição."
+        
+        if usuarios_cadastrados:
+            for usuario in usuarios_cadastrados:
+                if usuario.get("id") == id_digitado:
+                    return "Este ID já está sendo usado por outro monitor."
+        return True
     except FileNotFoundError:
         return "Arquivo de IDs não encontrado. Contate o administrador."
 

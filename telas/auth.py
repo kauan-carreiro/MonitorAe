@@ -5,7 +5,10 @@ from utils.terminal import (
     CINZA, RESET
 )
 from utils.usuarios import (
-    adicionar_usuario, buscar_usuario, buscar_por_email, atualizar_senha
+    adicionar_usuario, buscar_usuario, buscar_por_email, atualizar_senha, carregar_usuarios
+)
+from utils.emojis import (
+    CADEADO, CARTA, CONTRATO, CHAVE
 )
 from utils.emojis import (
     CADEADO, CARTA, CONTRATO, CHAVE
@@ -214,7 +217,8 @@ class TelaCadastro:
         print(f"\n  {CINZA}O ID de Monitor é fornecido pela instituição.{RESET}")
         while True:
             id_monitor = pedir_texto("ID de Monitor")
-            resultado = validar_id_monitor(id_monitor)
+            dados = carregar_usuarios()
+            resultado = validar_id_monitor(id_monitor, dados["usuarios"])
             if resultado is True:
                 break
             erro(resultado)
