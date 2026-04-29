@@ -11,10 +11,10 @@ O **MonitorAê** é uma plataforma educacional desenvolvida em Python que roda *
 O projeto nasceu com o objetivo de ajudar os alunos de escolas públicas estaduais a se prepararem de maneira fácil, centralizada e gratuita. Todos os conteúdos em um só lugar de maneira rápida e eficaz.
 
 ---
-<p align="center">
-  📁 <a href="https://drive.google.com/file/d/1oOe5d95wrvFQi-qx8FwZ2_u4gW9C04-t/view?usp=sharing">Documentação</a> •
-  🎥 <a href="https://youtu.be/cU161UhN8Ms">Vídeo</a>
-</p>
+
+## 📁 Documentação
+
+👉 [Acessar pasta no Google Drive](https://drive.google.com/drive/folders/1TWGYSU8sIXvJbo6uLz8xbIwCzJFnt4F6?usp=sharing)
 
 ---
 
