@@ -257,14 +257,122 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-##  Próximas melhorias
+## Conteúdo das VAs
 
-- [ ] Sistema de **Ranking** de Monitores e Alunos
-- [ ] Histórico de questões respondidas por usuário
-- [ ] Chat entre aluno e monitor
-- [ ] Exportação de relatório de desempenho
-- [ ] Suporte a mais matérias e descritores
-- [ ] Acessibilidade
+---
+
+## ✅ 1VA - Desenvolvido e Lançado
+
+### Funcionalidades implementadas:
+
+### Sistema de Autenticação
+
+- Login (Aluno e Monitor)
+- Cadastro com validações completas
+- Redefinição de senha (e-mail + nome)
+- Validação de ID para monitores
+
+### Tela Inicial
+
+- Opções: Login, Cadastro, Esqueci minha senha, Sair
+- Navegação por fluxo controlado
+
+### Menu Principal
+
+- Saudação personalizada ao usuário
+- Acesso às funcionalidades principais
+
+### Busca de Monitores
+
+- Listagem de monitores cadastrados
+- Filtros por:
+  - Matéria
+  - Escola
+  - Nome (busca parcial)
+  - Combinação e limpeza de filtros
+
+### Biblioteca de Questões
+
+- Matérias: Matemática e Português
+- Descritores organizados com paginação
+- Níveis de dificuldade:
+  -😊 Fácil
+  -😐 Médio
+  -😤 Difícil
+- Execução de questões com correção imediata
+- Resultado final com desempenho
+
+### Perfil do Usuário
+
+- Visualização dos dados cadastrados
+- Exclusão de conta com confirmação dupla
+
+---
+
+## 🚧 2VA - Em Desenvolvimento
+
+### Funcionalidades em desenvolvimento:
+
+### Chat entre usuários
+- Comunicação entre aluno e monitor
+- Envio e recebimento de mensagens
+- Tratamento de erros (mensagem vazia, falhas, etc.)
+
+### FAQ (Perguntas Frequentes)
+- Lista de dúvidas comuns
+- Busca por perguntas
+- Sugestão de suporte adicional
+
+### Avaliação de Monitores
+- Sistema de notas (0 a 10)
+- Cálculo de média automática
+- Restrições:
+   - Não é permitido se autoavaliar
+   - Apenas uma avaliação por monitor
+
+### Simulados
+
+- Configuração personalizada:
+   - Matéria
+   - Dificuldade
+   - Quantidade de questões
+   - Geração aleatória de questões
+   - Resultado com porcentagem de acertos
+
+### Acompanhamento de Desempenho
+
+- Histórico baseado nos simulados realizados
+- Métricas:
+   - Total de questões
+   - Taxa de acertos
+   - Atualização automática
+
+---
+
+## 🚧 3VA - Em Desenvolvimento
+
+## Funcionalidades planejadas:
+
+#### Solicitação de Material
+- Solicitação de conteúdos por alunos
+- Resposta por monitores
+
+#### Ranking de Alunos
+- Classificação baseada em desempenho
+- Comparação entre usuários
+
+#### Seleção de Monitores
+- Escolha de monitores preferidos
+- Possível vínculo aluno-monitor
+
+#### Sistema de Bolsas
+- Incentivos baseados em desempenho ou participação
+
+#### Notificações
+- Alertas do sistema:
+- Novas mensagens
+- Avaliações
+- Atualizações importantes
 
 ---
 
