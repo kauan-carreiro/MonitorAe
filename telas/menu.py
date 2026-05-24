@@ -13,23 +13,16 @@ from telas.biblioteca      import TelaBiblioteca
  
  
 class TelaMenu:
-    """
-    Tela principal após o login.
-    Mantém o loop enquanto o usuário não sair.
-    """
-    
     def __init__(self, router, usuario):
         self.router  = router
         self.usuario = usuario  # dados do usuário logado
     
     def mostrar(self):
-        """
-        Loop do menu principal.
-        """
+        """Loop do menu principal."""
         while True:
             cabecalho_app()
             
-            # Saudação personalizada — pega só o primeiro nome
+            # Saudação personalizada com nome do usuário e tipo (Aluno ou Monitor)
             primeiro_nome = self.usuario.get("nome", "Usuário").split()[0]
             tipo          = self.usuario.get("tipo", "Aluno")
             

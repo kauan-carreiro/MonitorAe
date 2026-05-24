@@ -9,15 +9,8 @@ from utils.emojis import (
 )
 from utils.usuarios import listar_alunos_mesma_escola
 
-# =============================================================================
-# Tela que mostra outros alunos da mesma escola do usuário logado.
-# =============================================================================
-
 class TelaAlunosProximos:
-    """
-    Exibe alunos que estudam na mesma escola do usuário logado.
-    """
-    
+    """Exibe alunos que estudam na mesma escola do usuário logado."""
     def __init__(self, router, usuario):
         self.router  = router
         self.usuario = usuario

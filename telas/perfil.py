@@ -20,9 +20,6 @@ class TelaPerfil:
         self.usuario = usuario  # dicionário com os dados do usuário logado
     
     def mostrar(self):
-        """
-        Loop principal da tela de perfil.
-        """
         while True:
             cabecalho_app()
             titulo(f"{PESSOA}  MEU PERFIL")
@@ -41,9 +38,7 @@ class TelaPerfil:
                 return
     
     def _exibir_dados(self):
-        """
-        Mostra as informações do usuário de forma organizada.
-        """
+
         u = self.usuario
         tipo = u.get("tipo", "Aluno")
         

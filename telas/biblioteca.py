@@ -11,12 +11,6 @@ from utils.emojis import (
     LIVRO, CADERNO, ROSTO_FELIZ, ROSTO_NEU, ROSTO_PUTO,
     CHECK,ESTRELA, ERRADO, RAIO, TROFEU, ACENO
 )      
-# =============================================================================
-# A biblioteca de questões é onde o aluno pode estudar os descritores.
-# O conteúdo é carregado do arquivo banco_questoes.json.
-# =============================================================================
-
-
 
 # Caminho até o banco de questões
 PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
@@ -24,9 +18,7 @@ CAMINHO_QUESTOES = os.path.join(PASTA_ATUAL, "..", "questoes", "banco_questoes.j
 
 
 def carregar_banco():
-    """
-    Lê o arquivo banco_questoes.json e retorna o conteúdo.
-    """
+    """Lê o arquivo banco_questoes.json e retorna o conteúdo."""
     try:
         with open(CAMINHO_QUESTOES, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -35,10 +27,7 @@ def carregar_banco():
 
 
 class TelaBiblioteca:
-    """
-    Tela principal da Biblioteca.
-    Permite escolher entre Matemática e Português.
-    """
+    """Permite escolher entre Matemática e Português."""
     
     def __init__(self, router, usuario):
         self.router  = router
@@ -127,9 +116,8 @@ class TelaBiblioteca:
                 self._menu_dificuldade(dados_desc, nome_exibido)
     
     def _menu_dificuldade(self, dados_descritor, materia):
-        """
-        Exibe as opções de dificuldade para um descritor.
-        """
+        """Exibe as opções de dificuldade para um descritor."""
+        
         cabecalho_app()
         titulo(f"{RAIO}  {dados_descritor['nome']}")
         
@@ -154,10 +142,8 @@ class TelaBiblioteca:
         self._resolver_questoes(questoes, dados_descritor["nome"], nivel, materia)
     
     def _resolver_questoes(self, questoes, nome_descritor, nivel, materia):
-        """
-        Percorre as 5 questões e exibe uma a uma.
-        No final mostra o resultado (pontuação).
-        """
+        """Percorre as 5 questões e exibe uma a uma.No final mostra o resultado (pontuação)."""
+        
         acertos = 0
         total   = len(questoes)
         
@@ -198,7 +184,7 @@ class TelaBiblioteca:
             if i < total:
                 input(f"\n  {CINZA}Pressione ENTER para a próxima questão...{RESET}")
         
-        # ── Resultado Final ────────────────────────────────────────────
+        # Resultado final
         cabecalho_app()
         titulo(f"{TROFEU}  RESULTADO")
         

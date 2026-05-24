@@ -11,18 +11,13 @@ from utils.emojis import (
 )
  
 class TelaMonitores:
-    """
-    Exibe todos os monitores cadastrados com opção de filtrar.
-    """
-    
+    """Exibe todos os monitores cadastrados com opção de filtrar."""
     def __init__(self, router, usuario):
         self.router  = router
         self.usuario = usuario
     
     def mostrar(self):
-        """
-        Loop principal: exibe filtros e lista de monitores.
-        """
+        """Loop principal: exibe filtros e lista de monitores."""
         # Filtros ativos - começa com nenhum filtro
         filtro_materia = None
         filtro_escola  = None
@@ -32,19 +27,14 @@ class TelaMonitores:
             cabecalho_app()
             titulo(f"{LUPA}  MONITORES CADASTRADOS")
             
-            # Pega todos os monitores
             todos_monitores = listar_monitores()
             
-            # Aplica os filtros
             resultado = self._aplicar_filtros(todos_monitores, filtro_materia, filtro_escola, filtro_nome)
             
             # Mostra filtros ativos
             self._exibir_filtros_ativos(filtro_materia, filtro_escola, filtro_nome)
-            
-            # Exibe os monitores
             self._exibir_monitores(resultado)
-            
-            # Menu de ações
+
             print()
             imprimir_menu([
                 "Filtrar por Matéria",
@@ -81,10 +71,6 @@ class TelaMonitores:
                 return
     
     def _aplicar_filtros(self, monitores, materia, escola, nome):
-        """
-        Recebe a lista completa de monitores e retorna
-        apenas os que passam pelos filtros ativos.
-        """
         resultado = []
         for m in monitores:
             # Verifica filtro de matéria
@@ -104,9 +90,7 @@ class TelaMonitores:
         return resultado
     
     def _exibir_filtros_ativos(self, materia, escola, nome):
-        """
-        Mostra quais filtros estão ativos no momento.
-        """
+        """Mostra quais filtros estão ativos no momento."""
         ativos = []
         if materia:
             ativos.append(f"Matéria: {materia}")
@@ -121,9 +105,8 @@ class TelaMonitores:
             print(f"  {CINZA}(Sem filtros — exibindo todos os monitores){RESET}")
     
     def _exibir_monitores(self, monitores):
-        """
-        Formata e imprime cada monitor da lista.
-        """
+        """Formata e imprime cada monitor da lista."""
+        
         print(f"\n  {AMARELO}Total encontrado: {len(monitores)} monitor(es){RESET}\n")
         
         if not monitores:
