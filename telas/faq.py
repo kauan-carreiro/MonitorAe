@@ -624,23 +624,4 @@ class TelaAprovarSugestoes:
         salvar_faq(dados_faq)
         salvar_sugestoes(dados_completos)
         sucesso("Sugestão aprovada e adicionada à FAQ!")
-
-        if opcao == 1:
-            # Aprova: adiciona à FAQ sem palavras-chave (busca por texto direto)
-            dados_faq = carregar_faq()
-            novo_id   = len(dados_faq["perguntas"]) + 1
-            nova_entrada = {
-                "id": novo_id,
-                "pergunta": sugestao["pergunta"],
-                "resposta": sugestao["resposta"]
-            }
-            dados_faq["perguntas"].append(nova_entrada)
-            salvar_faq(dados_faq)
-            salvar_sugestoes(dados_completos)
-            sucesso("Sugestão aprovada e adicionada à FAQ!")
-
-        elif opcao == 3:
-            salvar_sugestoes(dados_completos)
-            info("Sugestão rejeitada e removida.")
-
         pausar()
