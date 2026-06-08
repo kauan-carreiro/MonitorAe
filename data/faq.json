@@ -1,0 +1,29 @@
+{
+    "perguntas": [
+        {
+            "id": 1,
+            "pergunta": "Como faço para encontrar um monitor?",
+            "resposta": "Acesse a opção 'Monitores' no menu principal. Lá você pode filtrar por matéria, escola ou nome para encontrar o monitor ideal para você."
+        },
+        {
+            "id": 2,
+            "pergunta": "Esqueci minha senha. O que faço?",
+            "resposta": "Na tela inicial, escolha a opção 'Esqueci minha senha'. Você precisará informar seu e-mail e nome completo para redefinir."
+        },
+        {
+            "id": 3,
+            "pergunta": "Como crio uma conta no MonitorAê?",
+            "resposta": "Na tela inicial, escolha 'Criar conta'. Você pode se cadastrar como Aluno ou como Monitor. O monitor precisa de um ID fornecido pela instituição."
+        },
+        {
+            "id": 4,
+            "pergunta": "Como excluo minha conta?",
+            "resposta": "Acesse 'Meu Perfil' no menu principal e escolha 'Deletar minha conta'. Você precisará confirmar com sua senha. Atenção: essa ação é irreversível."
+        },
+        {
+            "id": 5,
+            "pergunta": "O que é a Biblioteca de Questões?",
+            "resposta": "É uma seção com exercícios de Matemática e Português organizados por descritores e níveis de dificuldade (fácil, médio e difícil). Ótima para praticar e se preparar para provas."
+        }
+    ]
+}
