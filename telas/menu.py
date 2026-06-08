@@ -4,14 +4,14 @@ from utils.terminal import (
     AMARELO, CINZA, RESET, NEGRITO
 )
 from utils.emojis import (
-    ACENO, PESSOA, LUPA, ESCOLA, PORTA, LIVRO, CADERNO, AVISO
+    ACENO, PESSOA, LUPA, ESCOLA, PORTA, LIVRO, CADERNO, AVISO, DADO
 )
 from telas.perfil          import TelaPerfil
 from telas.monitores       import TelaMonitores
 from telas.alunos_proximos import TelaAlunosProximos
 from telas.biblioteca      import TelaBiblioteca
 from telas.faq             import TelaFaq, TelaAprovarSugestoes
-
+from telas.simulado          import TelaSimulado
 
 class TelaMenu:
     def __init__(self, router, usuario):
@@ -40,23 +40,25 @@ class TelaMenu:
                     f"{LUPA}  Monitores",
                     f"{ESCOLA}  Alunos Próximos (mesma escola)",
                     f"{LIVRO}  Biblioteca de Questões",
+                    f"{DADO}  Simulado",
                     f"{CADERNO}  FAQ",
                     f"{AVISO}  Aprovar Sugestões da FAQ",
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(7)
+                opcao = pedir_opcao(8)
             else:
                 imprimir_menu([
                     f"{PESSOA}  Meu Perfil",
                     f"{LUPA}  Monitores",
                     f"{ESCOLA}  Alunos Próximos (mesma escola)",
                     f"{LIVRO}  Biblioteca de Questões",
+                    f"{DADO}  Simulado",
                     f"{CADERNO}  FAQ",
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(6)
+                opcao = pedir_opcao(7)
 
             if opcao == 1:
                 TelaPerfil(self.router, self.usuario).mostrar()
@@ -73,19 +75,22 @@ class TelaMenu:
 
             elif opcao == 4:
                 TelaBiblioteca(self.router, self.usuario).mostrar()
-
+            
             elif opcao == 5:
-                TelaFaq(self.router, self.usuario).mostrar()
+                TelaSimulado(self.router, self.usuario).mostrar()
 
             elif opcao == 6:
+                TelaFaq(self.router, self.usuario).mostrar()
+
+            elif opcao == 7:
                 if tipo == "Monitor":
                     TelaAprovarSugestoes(self.router, self.usuario).mostrar()
                 else:
-                    # Aluno: opção 6 é Sair
+                    # Aluno: opção 7 é Sair
                     self.router.ir_para("inicio")
                     return
 
-            elif opcao == 7:
+            elif opcao == 8:
                 # Só monitor chega aqui: Sair
                 self.router.ir_para("inicio")
                 return

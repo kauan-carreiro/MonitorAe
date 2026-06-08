@@ -28,3 +28,4 @@ ROSTO_FELIZ  = "\U0001F60A"   # 😊
 ROSTO_NEU    = "\U0001F610"   # 😐
 ROSTO_PUTO   = "\U0001F624"   # 😤
 CONTRATO     = "\U0001F4C4"   # 📝
+DADO         = "\U0001F3B2"   # 🎲
