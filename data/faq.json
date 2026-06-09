@@ -24,6 +24,266 @@
             "id": 5,
             "pergunta": "O que é a Biblioteca de Questões?",
             "resposta": "É uma seção com exercícios de Matemática e Português organizados por descritores e níveis de dificuldade (fácil, médio e difícil). Ótima para praticar e se preparar para provas."
+        },
+        {
+            "id": 6,
+            "pergunta": "Como funciona o simulado?",
+            "resposta": "No menu principal, acesse 'Simulado'. Você escolhe a matéria e o nível de dificuldade, e o sistema sorteia questões do banco. Ao final, você vê sua pontuação e o desempenho por descritor."
+        },
+        {
+            "id": 7,
+            "pergunta": "Como entro em contato com um monitor?",
+            "resposta": "Encontre o monitor pelo menu 'Monitores' e acesse o perfil dele. Lá você verá a opção de iniciar um chat. O monitor receberá sua mensagem e poderá responder quando estiver disponível."
+        },
+        {
+            "id": 8,
+            "pergunta": "Posso usar o MonitorAê no celular?",
+            "resposta": "Sim! O MonitorAê é compatível com o Termux, um emulador de terminal para Android. Basta instalar o Python 3 pelo Termux e executar o sistema normalmente, sem precisar de internet para as funções principais."
+        },
+        {
+            "id": 9,
+            "pergunta": "O que é o ID de monitor e como consigo o meu?",
+            "resposta": "O ID de monitor é um código único fornecido pela sua instituição de ensino para validar que você está autorizado a atuar como monitor. Solicite esse código à coordenação ou ao responsável pelo programa de monitoria da sua escola."
+        },
+        {
+            "id": 10,
+            "pergunta": "Como altero meu e-mail ou senha?",
+            "resposta": "Acesse 'Meu Perfil' no menu principal e escolha 'Editar dados'. Você pode atualizar seu e-mail e sua senha a qualquer momento. A nova senha deve ter pelo menos 6 caracteres."
+        },
+        {
+            "id": 11,
+            "pergunta": "Como avalio um monitor?",
+            "resposta": "Acesse o perfil do monitor da sua escola pelo menu 'Monitores' e escolha a opção 'Avaliar'. Você pode dar uma nota de 0 a 10."
+        },
+        {
+            "id": 12,
+            "pergunta": "Como vejo meu histórico de desempenho?",
+            "resposta": "No menu principal, acesse 'Meu Desempenho'. Lá você encontra o histórico de simulados realizados, sua pontuação em cada matéria e a evolução ao longo do tempo."
+        },
+        {
+            "id": 13,
+            "pergunta": "O MonitorAê precisa de internet para funcionar?",
+            "resposta": "A maioria das funções — login, cadastro, busca de monitores, simulados e biblioteca de questões — funciona totalmente offline. A única funcionalidade que requer internet é o assistente de IA (FAQ Inteligente), que consulta uma Inteligência Artificial externa."
+        },
+        {
+            "id": 14,
+            "pergunta": "O que é o assistente de IA do FAQ?",
+            "resposta": "É um módulo que usa um Modelo de Linguagem de Grande Escala (LLM) para responder dúvidas que não estejam cadastradas na FAQ. Quando nenhuma pergunta do banco corresponde à sua dúvida, o sistema oferece consultar o assistente, que gera uma resposta em tempo real."
+        },
+        {
+            "id": 15,
+            "pergunta": "Como sugiro uma nova pergunta para a FAQ?",
+            "resposta": "Ao consultar o assistente de IA e receber uma resposta útil, o sistema oferece a opção 'Sugerir esta resposta para a FAQ'. Ao confirmar, a sugestão fica pendente para revisão de um monitor, que pode aprovar, editar ou rejeitar."
+        },
+        {
+            "id": 16,
+            "pergunta": "Como um monitor aprova sugestões da FAQ?",
+            "resposta": "No menu do monitor, acesse 'Gerenciar FAQ'. Lá aparecem todas as sugestões pendentes enviadas por alunos. O monitor pode aceitar a resposta original, editá-la antes de aprovar, ou rejeitar a sugestão."
+        },
+        {
+            "id": 17,
+            "pergunta": "Quantas matérias estão disponíveis no banco de questões?",
+            "resposta": "Atualmente o banco conta com questões de Matemática e Português, com aproximadamente 150 questões distribuídas em três níveis de dificuldade: fácil, médio e difícil. Novas questões estão planejadas para versões futuras."
+        },
+        {
+            "id": 18,
+            "pergunta": "Como funciona o nível de dificuldade das questões?",
+            "resposta": "As questões são classificadas em fácil, médio e difícil. No simulado e na biblioteca, você pode escolher o nível que deseja praticar. Recomendamos começar pelo nível fácil e avançar conforme o desempenho melhora."
+        },
+        {
+            "id": 19,
+            "pergunta": "O que são descritores nas questões?",
+            "resposta": "Descritores são habilidades específicas que uma questão avalia, seguindo a matriz de referência do SAEPE (Sistema de Avaliação da Educação de Pernambuco). Por exemplo, em Matemática, o D01 avalia leitura e interpretação de números naturais."
+        },
+        {
+            "id": 20,
+            "pergunta": "Meu chat não está enviando mensagens. O que fazer?",
+            "resposta": "Verifique se você está logado corretamente e se o monitor com quem deseja conversar está cadastrado no sistema. Se o problema persistir, tente sair e entrar novamente na conta. Caso o erro continue, entre em contato com o suporte da instituição."
+        },
+        {
+            "id": 21,
+            "pergunta": "Posso ter mais de uma conta no MonitorAê?",
+            "resposta": "Não. Cada e-mail só pode ser vinculado a uma conta. Se quiser mudar de perfil (de aluno para monitor, por exemplo), você precisará excluir a conta atual e criar uma nova com as novas informações."
+        },
+        {
+            "id": 22,
+            "pergunta": "Como o MonitorAê protege meus dados?",
+            "resposta": "Os dados são armazenados localmente em arquivos JSON no dispositivo onde o sistema é executado. Nenhuma informação pessoal é enviada para servidores externos, exceto as dúvidas digitadas ao consultar o assistente de IA."
+        },
+        {
+            "id": 23,
+            "pergunta": "Posso usar o MonitorAê sem me cadastrar?",
+            "resposta": "Não. É necessário criar uma conta para acessar as funcionalidades do sistema. O cadastro é gratuito e rápido — basta informar nome, e-mail e senha."
+        },
+        {
+            "id": 24,
+            "pergunta": "O que faço se meu login não funcionar?",
+            "resposta": "Verifique se o e-mail e a senha estão corretos. Lembre-se que a senha diferencia letras maiúsculas e minúsculas. Se esqueceu a senha, use a opção 'Esqueci minha senha' na tela inicial. Após 5 tentativas incorretas, o acesso fica temporariamente bloqueado."
+        },
+        {
+            "id": 25,
+            "pergunta": "Como faço para ser um monitor no sistema?",
+            "resposta": "Na tela de cadastro, escolha o perfil 'Monitor'. Você precisará de um ID de monitor válido, fornecido pela sua escola. Após o cadastro, seu perfil ficará visível para os alunos na busca de monitores."
+        },
+        {
+            "id": 26,
+            "pergunta": "Posso filtrar monitores por escola?",
+            "resposta": "Sim! Na seção 'Monitores', você pode combinar filtros de matéria, escola e nome. Isso facilita encontrar um monitor da sua própria escola ou de uma escola próxima."
+        },
+        {
+            "id": 27,
+            "pergunta": "O sistema funciona sem instalar bibliotecas externas?",
+            "resposta": "Sim. O MonitorAê foi desenvolvido usando apenas módulos nativos do Python 3, como json, os, re, urllib.request e unicodedata. Não é necessário instalar nenhuma biblioteca adicional via pip para as funcionalidades principais."
+        },
+        {
+            "id": 28,
+            "pergunta": "O que são números naturais?",
+            "resposta": "Números naturais são os números inteiros não negativos usados para contar: 0, 1, 2, 3, 4... Eles não têm vírgula nem parte negativa. Exemplos do dia a dia: número de alunos em uma sala, quantidade de livros em uma prateleira."
+        },
+        {
+            "id": 29,
+            "pergunta": "Como calculo o MMC de dois números?",
+            "resposta": "MMC significa Mínimo Múltiplo Comum. Para calcular, fatore os dois números em primos e multiplique os fatores usando o maior expoente de cada um. Exemplo: MMC(4, 6) → 4=2² e 6=2x3 → MMC = 2²x3 = 12. O MMC é muito usado para somar frações com denominadores diferentes."
+        },
+        {
+            "id": 30,
+            "pergunta": "Como calculo o MDC de dois números?",
+            "resposta": "MDC significa Máximo Divisor Comum. Fatore os dois números e multiplique apenas os fatores comuns com o menor expoente. Exemplo: MDC(12, 18) → 12=2²x3 e 18=2x3² → MDC = 2x3 = 6. O MDC é útil para simplificar frações."
+        },
+        {
+            "id": 31,
+            "pergunta": "Como somo frações com denominadores diferentes?",
+            "resposta": "Para somar frações com denominadores diferentes, primeiro encontre o MMC dos denominadores. Em seguida, converta cada fração para esse denominador comum e some os numeradores. Exemplo: 1/3 + 1/4 → MMC(3,4)=12 → 4/12 + 3/12 = 7/12."
+        },
+        {
+            "id": 32,
+            "pergunta": "Como multiplico e divido frações?",
+            "resposta": "Para multiplicar frações, multiplique numerador com numerador e denominador com denominador: 2/3 x 3/4 = 6/12 = 1/2. Para dividir, multiplique a primeira fração pelo inverso (fração invertida) da segunda: 2/3 ÷ 1/4 = 2/3 x 4/1 = 8/3."
+        },
+        {
+            "id": 33,
+            "pergunta": "Como simplifico uma fração?",
+            "resposta": "Para simplificar uma fração, divida o numerador e o denominador pelo MDC entre eles. Exemplo: 12/18 → MDC(12,18)=6 → 12÷6 / 18÷6 = 2/3. Uma fração está na forma irredutível quando o MDC entre numerador e denominador é 1."
+        },
+        {
+            "id": 34,
+            "pergunta": "Como calculo a porcentagem de um número?",
+            "resposta": "Para calcular X% de um número N, multiplique N por X e divida por 100, ou multiplique por X/100. Exemplo: 30% de 200 = 200 x 30/100 = 60. Dica rápida: 10% é sempre dividir por 10; 50% é dividir por 2; 1% é dividir por 100."
+        },
+        {
+            "id": 35,
+            "pergunta": "Como calculo aumento e desconto percentual?",
+            "resposta": "Para aumento: multiplique o valor original por (1 + taxa/100). Exemplo: R$80 com 25% de aumento → 80 x 1,25 = R$100. Para desconto: multiplique por (1 - taxa/100). Exemplo: R$80 com 20% de desconto → 80 x 0,80 = R$64."
+        },
+        {
+            "id": 36,
+            "pergunta": "Como descubro qual é a porcentagem de um valor em relação a outro?",
+            "resposta": "Divida a parte pelo total e multiplique por 100. Exemplo: em uma turma de 40 alunos, 10 tiraram nota máxima. Qual a porcentagem? → 10/40 x 100 = 25%. Esse cálculo é muito usado em problemas de aprovação, estatísticas e descontos."
+        },
+        {
+            "id": 37,
+            "pergunta": "Como resolvo uma equação de primeiro grau?",
+            "resposta": "Em uma equação do tipo ax + b = c, isole o x passando os números para o outro lado (trocando o sinal). Exemplo: 3x + 5 = 14 → 3x = 14 - 5 → 3x = 9 → x = 3. Verifique substituindo o valor encontrado na equação original."
+        },
+        {
+            "id": 38,
+            "pergunta": "O que é uma expressão algébrica?",
+            "resposta": "Uma expressão algébrica combina números e letras (variáveis) usando operações matemáticas. Exemplo: 2x + 3y - 5. Os termos com a mesma variável são chamados de termos semelhantes e podem ser somados: 3x + 5x = 8x. Já 3x + 5y não podem ser somados diretamente."
+        },
+        {
+            "id": 39,
+            "pergunta": "Como monto uma equação a partir de um problema de texto?",
+            "resposta": "Identifique o que é desconhecido e chame de x. Traduza as informações do problema em operações matemáticas. Exemplo: 'Um número somado a 8 é igual a 20' → x + 8 = 20 → x = 12. Leia o enunciado com atenção, procure palavras como 'somado', 'diminuído', 'o dobro', 'a metade'."
+        },
+        {
+            "id": 40,
+            "pergunta": "Como calculo a área de figuras planas básicas?",
+            "resposta": "As fórmulas principais são: Quadrado → lado²; Retângulo → base x altura; Triângulo → (base x altura) / 2; Círculo → π x raio². Exemplo: um retângulo de base 5m e altura 3m tem área = 5 x 3 = 15m²."
+        },
+        {
+            "id": 41,
+            "pergunta": "Qual a diferença entre perímetro e área?",
+            "resposta": "Perímetro é a soma de todos os lados de uma figura (a medida do contorno). Área é a superfície interna da figura. Exemplo: um quadrado de lado 4cm tem perímetro = 4x4 = 16cm e área = 4² = 16cm². A unidade do perímetro é cm/m e a da área é cm²/m²."
+        },
+        {
+            "id": 42,
+            "pergunta": "O que é o Teorema de Pitágoras e quando usar?",
+            "resposta": "Em um triângulo retângulo, o quadrado da hipotenusa (lado maior, oposto ao ângulo reto) é igual à soma dos quadrados dos catetos: a² = b² + c². Use quando conhecer dois lados e quiser encontrar o terceiro. Exemplo: catetos 3 e 4 → hipotenusa = √(9+16) = √25 = 5."
+        },
+        {
+            "id": 43,
+            "pergunta": "Como localizo informações em um texto de forma eficiente?",
+            "resposta": "Leia o enunciado da questão antes de ler o texto para saber o que procurar. Em seguida, faça uma leitura seletiva, prestando atenção em nomes, datas, números e palavras em destaque. As informações explícitas estão escritas diretamente no texto — não exigem interpretação, apenas localização."
+        },
+        {
+            "id": 44,
+            "pergunta": "Qual a diferença entre informação explícita e implícita em um texto?",
+            "resposta": "Informação explícita é a que está escrita diretamente no texto, sem precisar interpretar. Informação implícita é a que está nas entrelinhas — o leitor precisa fazer uma inferência a partir do contexto. Exemplo explícito: 'Ana tem 15 anos.' Exemplo implícito: 'Ana cursava o 1º ano do ensino médio' → subentende-se que tem por volta de 15 anos."
+        },
+        {
+            "id": 45,
+            "pergunta": "O que é ideia principal de um texto e como identificá-la?",
+            "resposta": "A ideia principal é o assunto central que o texto aborda. Para identificá-la, pergunte: 'Do que esse texto trata principalmente?' Geralmente está no título, no primeiro parágrafo ou se repete ao longo do texto. As demais informações são ideias secundárias que apoiam ou exemplificam a principal."
+        },
+        {
+            "id": 46,
+            "pergunta": "O que é inferência em leitura?",
+            "resposta": "Inferir é chegar a uma conclusão que não está escrita explicitamente, usando as pistas do texto e seu conhecimento de mundo. Exemplo: se um texto diz 'Maria entrou encharcada de chuva', podemos inferir que estava chovendo lá fora, mesmo que isso não esteja escrito. Perguntas de inferência costumam ter termos como 'podemos concluir que' ou 'subentende-se que'."
+        },
+        {
+            "id": 47,
+            "pergunta": "O que são figuras de linguagem e quais as mais cobradas?",
+            "resposta": "Figuras de linguagem são recursos expressivos que dão mais força ou beleza ao texto. As mais cobradas são: Metáfora (comparação sem 'como': 'Ela é um anjo'); Comparação/Símile (com 'como': 'forte como um touro'); Hipérbole (exagero: 'chorei um rio'); Personificação (dar características humanas a seres inanimados); Ironia (dizer o oposto do que se pensa)."
+        },
+        {
+            "id": 48,
+            "pergunta": "O que é denotação e conotação?",
+            "resposta": "Denotação é o sentido literal e objetivo de uma palavra, como está no dicionário. Conotação é o sentido figurado, subjetivo ou simbólico que a palavra assume no contexto. Exemplo: 'cachorro' em denotação = animal da espécie canina. Em conotação: 'ele é um cachorro' pode significar que é desleal ou que trabalha muito."
+        },
+        {
+            "id": 49,
+            "pergunta": "Qual a diferença entre coesão e coerência textual?",
+            "resposta": "Coesão é a ligação gramatical entre as partes do texto, feita por conectivos, pronomes e sinônimos. Coerência é a lógica e o sentido global do texto — as ideias precisam ser compatíveis entre si. Um texto pode ter coesão (boa gramática) mas ser incoerente (ideias contraditórias), e vice-versa."
+        },
+        {
+            "id": 50,
+            "pergunta": "O que são conectivos e para que servem?",
+            "resposta": "Conectivos são palavras ou expressões que ligam orações e parágrafos, indicando a relação entre as ideias. Principais tipos: adição (e, também, além disso); oposição (mas, porém, entretanto, contudo); causa (porque, pois, já que); conclusão (portanto, logo, assim); concessão (embora, apesar de). Usar conectivos adequados melhora muito a coesão do texto."
+        },
+        {
+            "id": 51,
+            "pergunta": "Como evitar repetição de palavras em um texto?",
+            "resposta": "Use recursos de coesão como: pronomes (substituir o nome por ele/ela/o/a); sinônimos (palavras com sentido parecido); hiperônimos (palavras mais gerais: 'animal' no lugar de 'cachorro'); elipse (omissão do sujeito quando já está claro). Exemplo: 'Pedro chegou. Ele estava cansado.' — 'Ele' substitui 'Pedro' e evita repetição."
+        },
+        {
+            "id": 52,
+            "pergunta": "Quais são os principais gêneros textuais cobrados nas provas?",
+            "resposta": "Os mais comuns são: Narrativo (conto, crônica, fábula — tem personagens, narrador, enredo); Dissertativo-argumentativo (redação, artigo — defende um ponto de vista com argumentos); Descritivo (descreve características de pessoas, lugares ou objetos); Instrucional (receita, manual, bula — dá instruções); Informativo (notícia, reportagem — relata fatos). Cada gênero tem estrutura e linguagem próprias."
+        },
+        {
+            "id": 53,
+            "pergunta": "Qual a diferença entre narrador em 1ª e 3ª pessoa?",
+            "resposta": "Narrador em 1ª pessoa participa da história e usa 'eu': conta os fatos pela própria perspectiva, com visão limitada ao que viveu. Narrador em 3ª pessoa está fora da história e usa 'ele/ela': pode ser onisciente (sabe tudo sobre os personagens) ou observador (descreve apenas o que vê de fora)."
+        },
+        {
+            "id": 54,
+            "pergunta": "Como identificar a estrutura de uma notícia?",
+            "resposta": "Uma notícia jornalística tem: Título (manchete) — chama atenção; Lide (1º parágrafo) — responde às perguntas: quem? o quê? quando? onde? como? por quê?; Corpo — desenvolve os detalhes com informações complementares. A linguagem é objetiva, impessoal e os fatos são apresentados em ordem de importância (do mais para o menos relevante)."
+        },
+        {
+            "id": 55,
+            "pergunta": "Quando usar 'mal' e 'mau'?",
+            "resposta": "'Mau' é adjetivo e se refere a qualidades negativas de pessoas ou coisas (oposto de 'bom'): 'Ele é um mau aluno.' 'Mal' é advérbio ou substantivo (oposto de 'bem'): 'Ele se saiu mal na prova.' Dica: tente substituir por 'bom/bem' — se fizer sentido com 'bom', use 'mau'; se fizer sentido com 'bem', use 'mal'."
+        },
+        {
+            "id": 56,
+            "pergunta": "Quando usar 'por que', 'porque', 'porquê' e 'por quê'?",
+            "resposta": "'Por que' (separado, sem acento) — pergunta ou explicação: 'Por que você foi?'; 'Porque' (junto, sem acento) — resposta/causa: 'Fui porque queria.'; 'Por quê' (separado, com acento) — no final de pergunta: 'Você foi por quê?'; 'O porquê' (com acento, precedido de artigo) — substantivo: 'Não sei o porquê disso.'"
+        },
+        {
+            "id": 57,
+            "pergunta": "O que é concordância verbal e como aplicar?",
+            "resposta": "Concordância verbal é a regra que faz o verbo concordar com o sujeito em número (singular/plural) e pessoa. Exemplo: 'Os alunos estudaram' (plural); 'O aluno estudou' (singular). Atenção aos casos especiais: sujeito coletivo usa verbo no singular ('A turma chegou'); sujeito composto usa plural ('Pedro e Maria vieram')."
         }
     ]
 }
