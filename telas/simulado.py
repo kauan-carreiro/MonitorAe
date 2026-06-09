@@ -12,7 +12,6 @@ from utils.emojis import (
     LIVRO, CADERNO, ROSTO_FELIZ, ROSTO_NEU, ROSTO_PUTO,
     CHECK, ERRADO, TROFEU, ESTRELA, ACENO, AVISO
 )
-# NOVO: importar a função para registrar o desempenho
 from utils.desempenho import registrar_simulado
 
 # Caminho para o banco de questões
@@ -20,7 +19,6 @@ PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
 CAMINHO_QUESTOES = os.path.join(PASTA_ATUAL, "..", "questoes", "banco_questoes.json")
 
 def _carregar_banco():
-    """Retorna o dicionário com todas as questões."""
     try:
         with open(CAMINHO_QUESTOES, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -28,15 +26,12 @@ def _carregar_banco():
         return {}
 
 class TelaSimulado:
-    """
-    Permite montar um simulado combinando descritores e níveis de dificuldade.
-    """
     def __init__(self, router, usuario):
         self.router = router
         self.usuario = usuario
         self.banco = _carregar_banco()
-        # Lista de blocos selecionados. Cada bloco: (materia, chave_desc, nome_desc, nivel)
-        self.selecionados = []
+        self.selecionados = []      # (materia, chave_desc, nome_desc, nivel)
+        self.quantidade = 10        # valor padrão
 
     def mostrar(self):
         while True:
@@ -44,29 +39,32 @@ class TelaSimulado:
             titulo(f"{LIVRO}  SIMULADO PERSONALIZADO")
 
             self._exibir_descritores_selecionados()
+            print(f"  {CINZA}Quantidade de questões configurada: {self.quantidade}{RESET}\n")
 
-            print(f"\n  {CINZA}Opções disponíveis:{RESET}\n")
+            print(f"  {CINZA}Opções disponíveis:{RESET}\n")
             imprimir_menu([
                 "Adicionar descritor",
                 "Remover descritor",
+                "Definir quantidade de questões",
                 "Começar simulado",
                 "---",
                 "Voltar ao menu"
             ])
 
-            opcao = pedir_opcao(4)
+            opcao = pedir_opcao(5)
 
             if opcao == 1:
                 self._adicionar_descritor()
             elif opcao == 2:
                 self._remover_descritor()
             elif opcao == 3:
-                self._executar_simulado()
+                self._definir_quantidade()
             elif opcao == 4:
+                self._executar_simulado()
+            elif opcao == 5:
                 return
 
     def _exibir_descritores_selecionados(self):
-        """Mostra a lista atual de blocos no topo da tela."""
         if not self.selecionados:
             print(f"\n  {CINZA}Nenhum descritor adicionado ainda.{RESET}")
             return
@@ -79,8 +77,6 @@ class TelaSimulado:
         linha("─", 50)
 
     def _adicionar_descritor(self):
-        """Fluxo para adicionar um novo bloco (matéria → descritor → dificuldade)."""
-        # 1. Escolher matéria
         materias = ["Matemática", "Português"]
         materia = escolher_da_lista("Matéria:", materias)
         if not materia:
@@ -92,7 +88,6 @@ class TelaSimulado:
             pausar()
             return
 
-        # 2. Escolher descritor
         descritores_itens = list(self.banco[chave_materia].items())
         if not descritores_itens:
             erro("Nenhum descritor disponível.")
@@ -107,7 +102,6 @@ class TelaSimulado:
         chave_desc = escolha_desc.split(" - ")[0]
         dados_desc = self.banco[chave_materia][chave_desc]
 
-        # 3. Escolher dificuldade
         niveis = [
             (f"Fácil {ROSTO_FELIZ}", "facil"),
             (f"Médio {ROSTO_NEU}", "medio"),
@@ -120,21 +114,18 @@ class TelaSimulado:
 
         nivel = next(n[1] for n in niveis if n[0] == escolha_nivel)
 
-        # 4. Verificar se o bloco já foi adicionado
         for item in self.selecionados:
             if (item[0] == materia and item[1] == chave_desc and item[3] == nivel):
                 erro("Este descritor e nível já foi adicionado ao simulado.")
                 pausar()
                 return
 
-        # 5. Adicionar
         nome_desc = dados_desc["nome"]
         self.selecionados.append((materia, chave_desc, nome_desc, nivel))
         sucesso(f"Adicionado: {materia} – {nome_desc} ({nivel.capitalize()})")
         pausar("  Pressione ENTER para continuar...")
 
     def _remover_descritor(self):
-        """Remove um bloco da lista de selecionados."""
         if not self.selecionados:
             info("Nenhum descritor foi adicionado ainda.")
             pausar()
@@ -156,8 +147,46 @@ class TelaSimulado:
             erro("Digite um número válido.")
         pausar()
 
+    def _definir_quantidade(self):
+        """Permite ao usuário escolher quantas questões deseja no simulado."""
+        # Calcula o total de questões disponíveis atualmente
+        total_disponivel = self._calcular_total_questoes()
+        if total_disponivel == 0:
+            erro("Não há questões disponíveis para os descritores selecionados.")
+            pausar()
+            return
+
+        print(f"\n  {CINZA}Total de questões disponíveis no momento: {AMARELO}{total_disponivel}{RESET}")
+        print(f"  {CINZA}Escolha quantas questões você quer responder:{RESET}\n")
+        opcoes = ["5 questões", "10 questões", "15 questões", "20 questões", f"Todas ({total_disponivel} questões)", "---", "Cancelar"]
+        imprimir_menu(opcoes)
+        opcao = pedir_opcao(len(opcoes) - 1)
+
+        if opcao == len(opcoes) - 1:  # Cancelar
+            return
+
+        quantidades = {1: 5, 2: 10, 3: 15, 4: 20, 5: total_disponivel}
+        self.quantidade = quantidades[opcao]
+
+        if self.quantidade > total_disponivel:
+            self.quantidade = total_disponivel
+            info(f"Total disponível menor que a quantidade escolhida. Usando todas ({total_disponivel}).")
+        sucesso(f"Quantidade definida: {self.quantidade} questão(ões).")
+        pausar()
+
+    def _calcular_total_questoes(self):
+        """Retorna o número total de questões dos blocos selecionados."""
+        total = 0
+        for materia, chave_desc, _, nivel in self.selecionados:
+            chave_materia = "Matematica" if materia == "Matemática" else "Portugues"
+            try:
+                questoes = self.banco[chave_materia][chave_desc][nivel]
+                total += len(questoes)
+            except KeyError:
+                continue
+        return total
+
     def _executar_simulado(self):
-        """Coleta todas as questões dos blocos selecionados, embaralha e inicia o quiz."""
         if not self.selecionados:
             erro("Adicione pelo menos um descritor antes de começar o simulado.")
             pausar()
@@ -169,10 +198,9 @@ class TelaSimulado:
             chave_materia = "Matematica" if materia == "Matemática" else "Portugues"
             try:
                 questoes_bloco = self.banco[chave_materia][chave_desc][nivel]
-                # Garante que cada questão receba referências ao descritor
                 for q in questoes_bloco:
                     q["_materia"] = materia
-                    q["_descritor_chave"] = chave_desc   # NOVO: adiciona chave do descritor
+                    q["_descritor_chave"] = chave_desc
                     q["_descritor_nome"] = nome_desc
                 todas_questoes.extend(questoes_bloco)
             except KeyError:
@@ -184,40 +212,35 @@ class TelaSimulado:
             pausar()
             return
 
-        # Embaralha a ordem das questões
+        total_disponivel = len(todas_questoes)
+        quantidade = min(self.quantidade, total_disponivel)
+
+        # Embaralha e seleciona as primeiras 'quantidade' questões
         random.shuffle(todas_questoes)
+        questoes_selecionadas = todas_questoes[:quantidade]
 
-        # Lista para armazenar os resultados (usada no registro de desempenho)
         resultados = []
-
-        # Executa o quiz
         acertos = 0
-        total = len(todas_questoes)
+        total = len(questoes_selecionadas)
 
-        for i, questao in enumerate(todas_questoes, 1):
+        for i, questao in enumerate(questoes_selecionadas, 1):
             cabecalho_app()
             titulo(f"{LIVRO}  SIMULADO — Questão {i}/{total}")
 
-            # Informações do descritor
             materia = questao.get("_materia", "?")
             descritor = questao.get("_descritor_nome", "?")
             print(f"  {CINZA}{materia} – {descritor}{RESET}\n")
 
-            # Enunciado
             print(f"  {NEGRITO}{questao['enunciado']}{RESET}\n")
-
-            # Alternativas
             for alt in questao["alternativas"]:
                 print(f"  {alt}")
 
-            # Resposta
             while True:
                 resp = input(f"\n  {AMARELO}Sua resposta (A/B/C/D): {RESET}").strip().upper()
                 if resp in ("A", "B", "C", "D"):
                     break
                 erro("Digite apenas A, B, C ou D.")
 
-            # Correção
             correta = questao["resposta"].upper()
             acertou = (resp == correta)
             if acertou:
@@ -226,7 +249,6 @@ class TelaSimulado:
             else:
                 print(f"\n  {VERMELHO}{ERRADO} Errado! Resposta correta: {correta}{RESET}")
 
-            #Registra o resultado desta questão para o desempenho
             resultados.append({
                 "materia": materia,
                 "descritor_chave": questao.get("_descritor_chave", ""),
@@ -237,7 +259,7 @@ class TelaSimulado:
             if i < total:
                 input(f"\n  {CINZA}Pressione ENTER para a próxima questão...{RESET}")
 
-        #Salva os resultados no histórico de desempenho
+        # Registra o desempenho
         registrar_simulado(self.usuario["email"], resultados)
 
         # Resultado final
