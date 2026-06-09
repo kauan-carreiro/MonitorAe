@@ -99,7 +99,7 @@ class TelaMonitores:
         self._ver_perfil(monitores[indice])
 
     def _ver_perfil(self, monitor):
-        """Exibe o perfil completo do monitor com nota média e opção de avaliar."""
+        """Exibe o perfil completo do monitor com nota média, opção de avaliar e (se for aluno) iniciar conversa."""
         while True:
             cabecalho_app()
             titulo(f"{ESTRELA}  PERFIL DO MONITOR")
@@ -135,15 +135,30 @@ class TelaMonitores:
                 opcoes.append("Alterar minha avaliação")
             else:
                 opcoes.append("Avaliar este monitor")
+
+            # Alunos podem iniciar conversa
+            if self.usuario.get("tipo") == "Aluno":
+                opcoes.append("Iniciar conversa")
+
             opcoes += ["---", "Voltar"]
 
             imprimir_menu(opcoes)
-            opcao = pedir_opcao(2)
+            # Total de opções = tamanho da lista menos 1 (por causa do "---")
+            total_opcoes = len(opcoes) - 1
+            opcao = pedir_opcao(total_opcoes)
 
+            # Mapeamento: a última opção é sempre "Voltar"
+            if opcao == total_opcoes:
+                return
+
+            # Opção 1: avaliar/alterar avaliação
             if opcao == 1:
                 self._avaliar(monitor)
-            else:
-                return
+
+            # Opção 2: iniciar conversa (se existir)
+            elif self.usuario.get("tipo") == "Aluno" and opcao == 2:
+                from telas.chat import TelaChat
+                TelaChat(self.router, self.usuario, monitor).mostrar()
 
     def _avaliar(self, monitor):
         """Fluxo completo de avaliação de um monitor."""

@@ -11,7 +11,7 @@ from telas.monitores       import TelaMonitores
 from telas.alunos_proximos import TelaAlunosProximos
 from telas.biblioteca      import TelaBiblioteca
 from telas.faq             import TelaFaq, TelaAprovarSugestoes
-from telas.simulado          import TelaSimulado
+from telas.simulado        import TelaSimulado
 
 class TelaMenu:
     def __init__(self, router, usuario):
@@ -33,7 +33,7 @@ class TelaMenu:
 
             linha()
 
-            # O monitor vê uma opção extra de aprovar sugestões da FAQ
+            # O monitor vê uma opção extra de aprovar sugestões da FAQ e outra de conversas
             if tipo == "Monitor":
                 imprimir_menu([
                     f"{PESSOA}  Meu Perfil",
@@ -43,10 +43,11 @@ class TelaMenu:
                     f"{DADO}  Simulado",
                     f"{CADERNO}  FAQ",
                     f"{AVISO}  Aprovar Sugestões da FAQ",
+                    f"💬  Minhas Conversas",
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(8)
+                opcao = pedir_opcao(9)   # 9 opções (1 a 9)
             else:
                 imprimir_menu([
                     f"{PESSOA}  Meu Perfil",
@@ -58,7 +59,7 @@ class TelaMenu:
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(7)
+                opcao = pedir_opcao(7)   # 7 opções para aluno
 
             if opcao == 1:
                 TelaPerfil(self.router, self.usuario).mostrar()
@@ -75,7 +76,7 @@ class TelaMenu:
 
             elif opcao == 4:
                 TelaBiblioteca(self.router, self.usuario).mostrar()
-            
+
             elif opcao == 5:
                 TelaSimulado(self.router, self.usuario).mostrar()
 
@@ -84,13 +85,23 @@ class TelaMenu:
 
             elif opcao == 7:
                 if tipo == "Monitor":
+                    # Monitor: opção 7 é "Aprovar Sugestões da FAQ"
                     TelaAprovarSugestoes(self.router, self.usuario).mostrar()
                 else:
-                    # Aluno: opção 7 é Sair
+                    # Aluno: opção 7 é "Sair da conta"
                     self.router.ir_para("inicio")
                     return
 
             elif opcao == 8:
-                # Só monitor chega aqui: Sair
+                if tipo == "Monitor":
+                    # Monitor: opção 8 é "Minhas Conversas"
+                    from telas.lista_conversas import TelaListaConversas
+                    TelaListaConversas(self.router, self.usuario).mostrar()
+                else:
+                    # Aluno não chega aqui (só tem 7 opções)
+                    pass
+
+            elif opcao == 9:
+                # Monitor: opção 9 é "Sair da conta"
                 self.router.ir_para("inicio")
                 return
