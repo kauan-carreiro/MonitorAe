@@ -61,30 +61,46 @@ Após fazer login, o usuário vê a saudação `Olá, {nome}! 👋` e acessa:
 ```
 monitora_ae/
 │
-├── app.py                    ← Ponto de entrada. Execute: python app.py
-├── router.py                 ← Controla a navegação entre telas
-│
-├── telas/
-│   ├── auth.py               ← Login, Cadastro e Redefinir senha
-│   ├── menu.py               ← Menu principal pós-login
-│   ├── perfil.py             ← Perfil e deletar conta
-│   ├── monitores.py          ← Listagem de monitores com filtros
-│   ├── alunos_proximos.py    ← Alunos da mesma escola
-│   └── biblioteca.py         ← Descritores e questões
-│
-├── utils/
-│   ├── terminal.py           ← Funções de formatação do terminal (cores, menus)
-│   └── usuarios.py           ← Leitura e escrita do banco de usuários
-│
-├── validacoes/
-│   └── validadores.py             ← Todas as regras de validação centralizadas
+├── app.py                  <- Ponto de entrada. Execute: python app.py
+├── README.md               <- Documentação principal do projeto
+├── router.py               <- Controla a navegação entre as telas do terminal
 │
 ├── data/
-│   ├── usuarios.json         ← Banco de dados de usuários (gerado automaticamente)
-│   └── ids_validos.json      ← IDs de monitor autorizados
+│   ├── avaliacoes.json     <- Logs e notas das avaliações dos monitores
+│   ├── conversas.json      <- Histórico das mensagens trocadas no chat
+│   ├── desempenho.json     <- Dados de acertos/erros dos estudantes
+│   ├── faq.json            <- Banco de perguntas e respostas frequentes
+│   ├── ids_validos.json    <- IDs de monitor autorizados para cadastro
+│   ├── sugestoes_faq.json  <- Sugestões enviadas pelos usuários para o FAQ
+│   └── usuarios.json       <- Banco de dados de usuários (gerado automaticamente)
 │
-└── questoes/
-    └── banco_questoes.json   ← 150 questões (5 desc × 3 níveis × 5 questões × 2 matérias)
+├── questoes/
+│   └── banco_questoes.json <- 150 questões (5 desc × 3 níveis × 5 questões × 2 matérias)
+│
+├── telas/
+│   ├── alunos_proximos.py  <- Visualização de alunos da mesma escola
+│   ├── auth.py             <- Telas de Login, Cadastro e Redefinição de senha
+│   ├── biblioteca.py       <- Menu de descritores e banco de questões
+│   ├── chat.py             <- Interface de chat ativo entre alunos e monitores
+│   ├── desempenho_detalhes.py <- Gráficos e relatórios de evolução do aluno
+│   ├── faq.py              <- Central de ajuda e dúvidas frequentes
+│   ├── lista_conversas.py  <- Histórico de chats abertos para o usuário
+│   ├── menu.py             <- Menu principal pós-login (Aluno / Monitor)
+│   ├── monitores.py        <- Listagem e busca de monitores com filtros
+│   ├── perfil.py           <- Detalhes do perfil e opção de deletar conta
+│   └── simulado.py         <- Inicialização e execução de simulados
+│
+├── utils/
+│   ├── avaliacoes.py       <- Funções lógicas para cálculo e salvamento de notas
+│   ├── chat.py             <- Regras de negócio e envio de mensagens
+│   ├── desempenho.py       <- Processamento de estatísticas e rendimento
+│   ├── emojis.py           <- Central de mapeamento de ícones e emojis para o terminal
+│   ├── terminal.py         <- Formatação visual do terminal (cores, cabeçalhos, menus)
+│   └── usuarios.py         <- Manipulação e persistência do banco de usuários
+│
+└── validacoes/
+    └── validadores.py      <- Regras de validação centralizadas (CPF, e-mail, senhas)
+
 ```
 
 ---
