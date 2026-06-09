@@ -1,4 +1,9 @@
 {
     "avaliacoes": [
+        {
+            "email_avaliador": "aluno@email.com",
+            "email_monitor": "kauan@email.com",
+            "nota": 10
+        }
     ]
 }

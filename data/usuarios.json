@@ -3,10 +3,17 @@
         {
             "tipo": "Monitor",
             "nome": "KAUAN HENRIQUE",
-            "escola": "Escola Estadual Dom Pedro II",
+            "escola": "EREM Adelaide Pessoa Câmara",
             "materia": "Matemática",
             "id": "MON001",
             "email": "kauan@email.com",
+            "senha": "A123456!"
+        },
+        {
+            "tipo": "Aluno",
+            "nome": "Kauan Henrique",
+            "escola": "EREM Adelaide Pessoa Câmara",
+            "email": "aluno@email.com",
             "senha": "A123456!"
         }
     ]

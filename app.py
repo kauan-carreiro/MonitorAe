@@ -11,12 +11,6 @@ from utils.emojis import (
  
  
 def tela_inicial(router):
-    """
-    A primeira tela que o usuário vê.
-    Opções: Login, Cadastro, Redefinir Senha, Sair.
-    
-    Esta função fica em loop até que o usuário faça login ou escolha Sair.
-    """
     while True:
         cabecalho_app()
         titulo(f"{CASA}  TELA INICIAL")

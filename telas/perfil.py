@@ -1,3 +1,5 @@
+from utils.desempenho import obter_desempenho_usuario
+from telas.desempenho_detalhes import TelaDesempenhoDetalhes
 from utils.usuarios import remover_usuario
 from utils.terminal import (
     cabecalho_app, titulo, linha,
@@ -27,14 +29,17 @@ class TelaPerfil:
             self._exibir_dados()
             
             print()
-            imprimir_menu(["Deletar minha conta", "---", "Voltar ao Menu"])
+            imprimir_menu(["Mais detalhes","Deletar minha conta", "---", "Voltar ao Menu"])
             
-            opcao = pedir_opcao(2)
+            opcao = pedir_opcao(3)
             
             if opcao == 1:
-                if self._deletar_conta():
-                    return  # Conta deletada, volta e deslogará
+                tela = TelaDesempenhoDetalhes(self.router, self.usuario)
+                tela.mostrar()
             elif opcao == 2:
+                if self._deletar_conta():
+                    return  # Conta deletada, volta para a tela inicia
+            elif opcao == 3:
                 return
     
     def _exibir_dados(self):
@@ -70,11 +75,12 @@ class TelaPerfil:
         
         linha("─", 48)
         
-        # Estatísticas mockadas (placeholder para expansão futura)
-        print(f"\n  {AMARELO}{GRAFICO} Estatísticas{RESET}")
-        print(f"  {CINZA}Questões respondidas:{RESET}  {AVISO} EM BREVE {AVISO}")
-        print(f"  {CINZA}Taxa de acerto:{RESET}        {AVISO} EM BREVE {AVISO}")
-        print(f"  {CINZA}Nível:{RESET}                 {AVISO} EM BREVE {AVISO}")
+        desempenho = obter_desempenho_usuario(self.usuario["email"])
+        total_q = desempenho["total_questoes"]
+        total_ac = desempenho["total_acertos"]
+        percentual = (total_ac / total_q * 100) if total_q > 0 else 0
+        print(f"  {CINZA}Questões respondidas:{RESET}  {total_q}")
+        print(f"  {CINZA}Taxa de acerto:{RESET}        {percentual:.1f}%")
     
     def _deletar_conta(self):
         """

@@ -12,6 +12,8 @@ from utils.emojis import (
     LIVRO, CADERNO, ROSTO_FELIZ, ROSTO_NEU, ROSTO_PUTO,
     CHECK, ERRADO, TROFEU, ESTRELA, ACENO, AVISO
 )
+# NOVO: importar a função para registrar o desempenho
+from utils.desempenho import registrar_simulado
 
 # Caminho para o banco de questões
 PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
@@ -91,7 +93,7 @@ class TelaSimulado:
             return
 
         # 2. Escolher descritor
-        descritores_itens = list(self.banco[chave_materia].items())  # [(chave, dados), ...]
+        descritores_itens = list(self.banco[chave_materia].items())
         if not descritores_itens:
             erro("Nenhum descritor disponível.")
             pausar()
@@ -102,7 +104,6 @@ class TelaSimulado:
         if not escolha_desc:
             return
 
-        # Extrai a chave do descritor (ex: "D01")
         chave_desc = escolha_desc.split(" - ")[0]
         dados_desc = self.banco[chave_materia][chave_desc]
 
@@ -139,7 +140,6 @@ class TelaSimulado:
             pausar()
             return
 
-        # Mostra novamente a lista numerada
         cabecalho_app()
         titulo("REMOVER DESCRITOR")
         self._exibir_descritores_selecionados()
@@ -169,10 +169,11 @@ class TelaSimulado:
             chave_materia = "Matematica" if materia == "Matemática" else "Portugues"
             try:
                 questoes_bloco = self.banco[chave_materia][chave_desc][nivel]
-                # Garante que cada questão receba uma referência ao descritor (opcional)
+                # Garante que cada questão receba referências ao descritor
                 for q in questoes_bloco:
                     q["_materia"] = materia
-                    q["_descritor"] = nome_desc
+                    q["_descritor_chave"] = chave_desc   # NOVO: adiciona chave do descritor
+                    q["_descritor_nome"] = nome_desc
                 todas_questoes.extend(questoes_bloco)
             except KeyError:
                 erro(f"Erro ao carregar questões de {materia} – {nome_desc} ({nivel})")
@@ -186,6 +187,9 @@ class TelaSimulado:
         # Embaralha a ordem das questões
         random.shuffle(todas_questoes)
 
+        # Lista para armazenar os resultados (usada no registro de desempenho)
+        resultados = []
+
         # Executa o quiz
         acertos = 0
         total = len(todas_questoes)
@@ -196,7 +200,7 @@ class TelaSimulado:
 
             # Informações do descritor
             materia = questao.get("_materia", "?")
-            descritor = questao.get("_descritor", "?")
+            descritor = questao.get("_descritor_nome", "?")
             print(f"  {CINZA}{materia} – {descritor}{RESET}\n")
 
             # Enunciado
@@ -215,14 +219,26 @@ class TelaSimulado:
 
             # Correção
             correta = questao["resposta"].upper()
-            if resp == correta:
+            acertou = (resp == correta)
+            if acertou:
                 acertos += 1
                 print(f"\n  {VERDE}{CHECK} Correto!{RESET}")
             else:
                 print(f"\n  {VERMELHO}{ERRADO} Errado! Resposta correta: {correta}{RESET}")
 
+            #Registra o resultado desta questão para o desempenho
+            resultados.append({
+                "materia": materia,
+                "descritor_chave": questao.get("_descritor_chave", ""),
+                "descritor_nome": descritor,
+                "acertou": acertou
+            })
+
             if i < total:
                 input(f"\n  {CINZA}Pressione ENTER para a próxima questão...{RESET}")
+
+        #Salva os resultados no histórico de desempenho
+        registrar_simulado(self.usuario["email"], resultados)
 
         # Resultado final
         cabecalho_app()
