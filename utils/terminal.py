@@ -84,27 +84,23 @@ def imprimir_menu(opcoes):
     for opcao in opcoes:
         if opcao == "---":
             print(CINZA + "  " + "─" * 30 + RESET)
+        elif opcao.startswith("Voltar") or "Sair da conta" in opcao:
+            print(f"  {AMARELO}[0]{RESET} {opcao}")
         else:
             print(f"  {AMARELO}[{numero}]{RESET} {opcao}")
             numero += 1
 
 
 def pedir_opcao(total, prompt="  Escolha uma opção: "):
-    """
-    Pede que o usuário digite uma opção numérica entre 1 e total.
-    Fica repetindo até receber uma entrada válida.
-    Retorna o número escolhido.
-    """
-    while True:
+     while True:
         try:
             entrada = input(f"\n{AMARELO}{prompt}{RESET}")
             numero = int(entrada)
-            if 1 <= numero <= total:
+            if 0 <= numero <= total:
                 return numero
             else:
-                erro(f"Digite um número entre 1 e {total}.")
+                erro(f"Digite um número entre 0 e {total}.")
         except ValueError:
-            # ValueError acontece quando o usuário digita texto em vez de número
             erro("Digite apenas números.")
 
 
@@ -180,7 +176,7 @@ def escolher_da_lista(titulo_lista, opcoes):
     print(f"\n  {AMARELO}{titulo_lista}{RESET}")
     for i, opcao in enumerate(opcoes, start=1):
         print(f"  {AMARELO}[{i}]{RESET} {opcao}")
-    print(f"  {AMARELO}[0]{RESET} Cancelar / Voltar")
+    print(f"  {AMARELO}[0]{RESET} Voltar")
     
     while True:
         try:

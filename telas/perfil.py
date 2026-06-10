@@ -31,7 +31,7 @@ class TelaPerfil:
             print()
             imprimir_menu(["Mais detalhes","Deletar minha conta", "---", "Voltar ao Menu"])
             
-            opcao = pedir_opcao(3)
+            opcao = pedir_opcao(2)
             
             if opcao == 1:
                 tela = TelaDesempenhoDetalhes(self.router, self.usuario)
@@ -39,7 +39,7 @@ class TelaPerfil:
             elif opcao == 2:
                 if self._deletar_conta():
                     return  # Conta deletada, volta para a tela inicia
-            elif opcao == 3:
+            elif opcao == 0:
                 return
     
     def _exibir_dados(self):

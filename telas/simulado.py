@@ -51,7 +51,7 @@ class TelaSimulado:
                 "Voltar ao menu"
             ])
 
-            opcao = pedir_opcao(5)
+            opcao = pedir_opcao(4)
 
             if opcao == 1:
                 self._adicionar_descritor()
@@ -61,7 +61,7 @@ class TelaSimulado:
                 self._definir_quantidade()
             elif opcao == 4:
                 self._executar_simulado()
-            elif opcao == 5:
+            elif opcao == 0:
                 return
 
     def _exibir_descritores_selecionados(self):
@@ -158,11 +158,11 @@ class TelaSimulado:
 
         print(f"\n  {CINZA}Total de questões disponíveis no momento: {AMARELO}{total_disponivel}{RESET}")
         print(f"  {CINZA}Escolha quantas questões você quer responder:{RESET}\n")
-        opcoes = ["5 questões", "10 questões", "15 questões", "20 questões", f"Todas ({total_disponivel} questões)", "---", "Cancelar"]
+        opcoes = ["5 questões", "10 questões", "15 questões", "20 questões", f"Todas ({total_disponivel} questões)", "---", "Voltar"]
         imprimir_menu(opcoes)
-        opcao = pedir_opcao(len(opcoes) - 1)
+        opcao = pedir_opcao(5)
 
-        if opcao == len(opcoes) - 1:  # Cancelar
+        if opcao == 0:  # Voltar
             return
 
         quantidades = {1: 5, 2: 10, 3: 15, 4: 20, 5: total_disponivel}

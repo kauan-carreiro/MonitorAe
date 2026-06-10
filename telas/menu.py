@@ -47,7 +47,7 @@ class TelaMenu:
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(9)   # 9 opções (1 a 9)
+                opcao = pedir_opcao(8)   # 8 opções (1 a 8) + 0 para sair
             else:
                 imprimir_menu([
                     f"{PESSOA}  Meu Perfil",
@@ -59,7 +59,7 @@ class TelaMenu:
                     "---",
                     f"{PORTA}  Sair da conta"
                 ])
-                opcao = pedir_opcao(7)   # 7 opções para aluno
+                opcao = pedir_opcao(6)   # 6 opções para aluno + 0 para sair
 
             if opcao == 1:
                 TelaPerfil(self.router, self.usuario).mostrar()
@@ -87,10 +87,6 @@ class TelaMenu:
                 if tipo == "Monitor":
                     # Monitor: opção 7 é "Aprovar Sugestões da FAQ"
                     TelaAprovarSugestoes(self.router, self.usuario).mostrar()
-                else:
-                    # Aluno: opção 7 é "Sair da conta"
-                    self.router.ir_para("inicio")
-                    return
 
             elif opcao == 8:
                 if tipo == "Monitor":
@@ -98,10 +94,9 @@ class TelaMenu:
                     from telas.lista_conversas import TelaListaConversas
                     TelaListaConversas(self.router, self.usuario).mostrar()
                 else:
-                    # Aluno não chega aqui (só tem 7 opções)
+                    # Aluno não chega aqui (só tem 6 opções)
                     pass
 
-            elif opcao == 9:
-                # Monitor: opção 9 é "Sair da conta"
+            elif opcao == 0:
                 self.router.ir_para("inicio")
                 return

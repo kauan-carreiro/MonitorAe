@@ -47,4 +47,4 @@ class TelaAlunosProximos:
         
         print()
         imprimir_menu(["Voltar"])
-        pedir_opcao(1)
+        pedir_opcao(0)

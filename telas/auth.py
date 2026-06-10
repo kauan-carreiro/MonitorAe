@@ -29,13 +29,13 @@ class TelaLogin:
         print(f"\n  {CINZA}Escolha seu tipo de perfil:{RESET}\n")
         imprimir_menu(["Aluno", "Monitor", "---", "Voltar"])
         
-        opcao = pedir_opcao(3)
+        opcao = pedir_opcao(2)
         
         if opcao == 1:
             self._fazer_login("Aluno")
         elif opcao == 2:
             self._fazer_login("Monitor")
-        elif opcao == 3:
+        elif opcao == 0:
             return  # Volta para a tela inicial
     
     def _fazer_login(self, tipo):
@@ -90,13 +90,13 @@ class TelaCadastro:
         print(f"\n  {CINZA}Qual tipo de conta deseja criar?{RESET}\n")
         imprimir_menu(["Aluno", "Monitor", "---", "Voltar"])
         
-        opcao = pedir_opcao(3)
+        opcao = pedir_opcao(2)
         
         if opcao == 1:
             self._cadastrar_aluno()
         elif opcao == 2:
             self._cadastrar_monitor()
-        elif opcao == 3:
+        elif opcao == 0:
             return  # Volta.
     
     def _cadastrar_aluno(self):

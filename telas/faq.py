@@ -271,9 +271,9 @@ class TelaFaq:
             print(f"  {CINZA}Digite sua dúvida para buscarmos uma resposta.{RESET}\n")
 
             imprimir_menu(["Buscar resposta", "Ver todas as dúvidas", "---", "Voltar"])
-            opcao = pedir_opcao(3)
+            opcao = pedir_opcao(2)
 
-            if opcao == 3:
+            if opcao == 0:
                 return
 
             if opcao == 2:
@@ -334,9 +334,9 @@ class TelaFaq:
 
             print()
             imprimir_menu(opcoes_menu)
-            opcao = pedir_opcao(len(opcoes_menu) - 1)
+            opcao = pedir_opcao(len(perguntas))
 
-            if opcao == len(perguntas) + 1:
+            if opcao == 0:
                 return
 
             self._exibir_resposta(perguntas[opcao - 1])
@@ -359,7 +359,7 @@ class TelaFaq:
             "---",
             "Voltar"
         ])
-        opcao = pedir_opcao(4)
+        opcao = pedir_opcao(3)
 
         if opcao == 1:
             return True             # vai direto para o campo de busca
@@ -392,9 +392,11 @@ class TelaFaq:
             print()
             imprimir_menu(opcoes_menu)
             n         = len(encontradas)
-            opcao     = pedir_opcao(n + 4)
+            opcao     = pedir_opcao(n + 3)
 
-            if opcao <= n:
+            if opcao == 0:
+                return False    # Voltar: vai para o menu do FAQ
+            elif opcao <= n:
                 self._exibir_resposta(encontradas[opcao - 1])
                 # fica no loop: usuário pode escolher outra pergunta dos resultados
             elif opcao == n + 1:
@@ -405,8 +407,6 @@ class TelaFaq:
             elif opcao == n + 3:
                 self._exibir_todas()
                 # fica no loop: usuário pode ainda escolher um resultado
-            elif opcao == n + 4:
-                return False    # Voltar: vai para o menu do FAQ
 
     def _exibir_resposta(self, pergunta):
         """Mostra a resposta completa de uma pergunta da FAQ."""
@@ -451,7 +451,7 @@ class TelaFaq:
         print(f"  {CINZA}Um monitor irá revisar e aprovar, se adequada.{RESET}\n")
 
         imprimir_menu(["Sugerir esta resposta para a FAQ", "---", "Voltar sem sugerir"])
-        opcao = pedir_opcao(2)
+        opcao = pedir_opcao(1)
 
         if opcao == 1:
             salvar_sugestao(duvida, resposta)
@@ -499,9 +499,9 @@ class TelaAprovarSugestoes:
             opcoes_menu.append("Voltar")
 
             imprimir_menu(opcoes_menu)
-            opcao = pedir_opcao(len(opcoes_menu) - 1)
+            opcao = pedir_opcao(len(pendentes))
 
-            if opcao == len(pendentes) + 1:
+            if opcao == 0:
                 return
 
             self._analisar_sugestao(pendentes, opcao - 1, dados)
@@ -528,9 +528,9 @@ class TelaAprovarSugestoes:
             "---",
             "Voltar"
         ])
-        opcao = pedir_opcao(4)
+        opcao = pedir_opcao(3)
 
-        if opcao == 4:
+        if opcao == 0:
             return
 
         if opcao == 3:
@@ -577,9 +577,9 @@ class TelaAprovarSugestoes:
             "---",
             "Voltar"
         ])
-        opcao_resposta = pedir_opcao(4)
+        opcao_resposta = pedir_opcao(3)
 
-        if opcao_resposta == 4:
+        if opcao_resposta == 0:
             return
 
         if opcao_resposta == 3:

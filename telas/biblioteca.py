@@ -42,13 +42,13 @@ class TelaBiblioteca:
             print(f"  {CINZA}Escolha uma matéria para estudar:{RESET}\n")
             imprimir_menu(["Matemática", "Português", "---", "Voltar"])
             
-            opcao = pedir_opcao(3)
+            opcao = pedir_opcao(2)
             
             if opcao == 1:
                 self._menu_materia("Matematica", "Matemática")
             elif opcao == 2:
                 self._menu_materia("Portugues", "Português")
-            elif opcao == 3:
+            elif opcao == 0:
                 return
     
     def _menu_materia(self, chave_json, nome_exibido):
@@ -97,12 +97,17 @@ class TelaBiblioteca:
             opcoes.append("Voltar à Biblioteca")
             
             imprimir_menu(opcoes)
-            opcao = pedir_opcao(len(opcoes) - 1)  # -1 porque "---" não conta
+            total_opcoes = len(nomes_descritores)
+            if fim < total:
+                total_opcoes += 1
+            if pagina_atual > 0:
+                total_opcoes += 1
+            opcao = pedir_opcao(total_opcoes)
             
             # Verifica o que o usuário escolheu
             idx_avancar = len(nomes_descritores) + 1 if fim < total else None
             idx_voltar  = (len(nomes_descritores) + (2 if idx_avancar else 1)) if pagina_atual > 0 else None
-            idx_sair    = len(opcoes) - 1  # último item (Voltar à Biblioteca)
+            idx_sair    = 0  # Voltar à Biblioteca
             
             if opcao == idx_sair:
                 return
@@ -124,9 +129,9 @@ class TelaBiblioteca:
         print(f"  {CINZA}Escolha o nível de dificuldade:{RESET}\n")
         imprimir_menu([f"{ROSTO_FELIZ} Fácil", f"{ROSTO_NEU} Médio", f"{ROSTO_PUTO} Difícil", "---", "Voltar"])
         
-        opcao = pedir_opcao(4)
+        opcao = pedir_opcao(3)
         
-        if opcao == 4:
+        if opcao == 0:
             return
         
         niveis = {1: "facil", 2: "medio", 3: "dificil"}

@@ -69,10 +69,10 @@ class TelaChat:
             opcoes.append("---")
             opcoes.append("Voltar")
             imprimir_menu(opcoes)
-            max_opcao = len(opcoes) - 1
+            max_opcao = len(opcoes) - 2
             opcao = pedir_opcao(max_opcao)
 
-            if opcao == max_opcao:   # Voltar
+            if opcao == 0:           # Voltar
                 return
             elif opcao == 1:         # Enviar
                 texto = pedir_texto("Digite sua mensagem", obrigatorio=False)

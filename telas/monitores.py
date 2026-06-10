@@ -44,7 +44,7 @@ class TelaMonitores:
                 "Voltar"
             ])
 
-            opcao = pedir_opcao(6)
+            opcao = pedir_opcao(5)
 
             if opcao == 1:
                 self._selecionar_monitor(resultado)
@@ -69,7 +69,7 @@ class TelaMonitores:
                 filtro_nome    = None
                 info("Filtros removidos.")
 
-            elif opcao == 6:
+            elif opcao == 0:
                 return
 
     def _selecionar_monitor(self, monitores):
@@ -143,12 +143,12 @@ class TelaMonitores:
             opcoes += ["---", "Voltar"]
 
             imprimir_menu(opcoes)
-            # Total de opções = tamanho da lista menos 1 (por causa do "---")
-            total_opcoes = len(opcoes) - 1
+            # Total de opções = tamanho da lista menos 2 (por causa do "---" e "Voltar")
+            total_opcoes = len(opcoes) - 2
             opcao = pedir_opcao(total_opcoes)
 
-            # Mapeamento: a última opção é sempre "Voltar"
-            if opcao == total_opcoes:
+            # Mapeamento: a opção 0 é sempre "Voltar"
+            if opcao == 0:
                 return
 
             # Opção 1: avaliar/alterar avaliação

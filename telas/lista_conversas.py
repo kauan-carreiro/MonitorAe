@@ -28,8 +28,8 @@ class TelaListaConversas:
             opcoes.append("Voltar")
 
             imprimir_menu(opcoes)
-            opcao = pedir_opcao(len(opcoes) - 1)
-            if opcao == len(conversas) + 1:
+            opcao = pedir_opcao(len(conversas))
+            if opcao == 0:
                 return
 
             conversa = conversas[opcao - 1]
