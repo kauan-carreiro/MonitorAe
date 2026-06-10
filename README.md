@@ -1,10 +1,10 @@
-#  MonitorAê — Plataforma Educacional 
+# MonitorAê — Plataforma Educacional
 
 > Conectando alunos e monitores de forma simples, direto pelo terminal.
 
 ---
 
-##  Sobre o projeto
+## Sobre o projeto
 
 O **MonitorAê** é uma plataforma educacional desenvolvida em Python que roda **inteiramente no terminal de comando**. Ele permite que alunos e monitores se cadastrem, se encontrem e pratiquem conteúdos de Matemática e Português por meio de questões organizadas por descritores e níveis de dificuldade.
 
@@ -18,98 +18,151 @@ O projeto nasceu com o objetivo de ajudar os alunos de escolas públicas estadua
 
 ---
 
-##  Funcionalidades
+## Funcionalidades
 
 ### Tela Inicial
 - **Login** — Aluno ou Monitor (com verificação de ID extra para monitores)
-- **Cadastro** — Aluno ou Monitor, com validações em todos os campos
+- **Cadastro** — Aluno ou Monitor, com validações em todos os campos (nome, e-mail, senha, escola, etc.)
 - **Esqueci minha senha** — Redefinição por e-mail + confirmação de nome
 - **Sair** — Encerra o programa
 
 ### Menu Principal (pós-login)
-Após fazer login, o usuário vê a saudação `Olá, {nome}! 👋` e acessa:
+Após fazer login, o usuário vê a saudação `Olá, {nome}! 👋` e acessa as funcionalidades de acordo com seu tipo:
 
-| Opção | Descrição |
-|---|---|
-| 👤 Meu Perfil | Dados do usuário + opção de deletar conta |
-| 🔍 Monitores | Lista todos os monitores com filtros |
-| 🏫 Alunos Próximos | Alunos cadastrados na mesma escola |
-| 📚 Biblioteca | Questões de Matemática e Português |
+| Opção (Aluno) | Opção (Monitor) | Descrição |
+|---|---|---|
+| 👤 Meu Perfil | 👤 Meu Perfil | Dados do usuário + opção de deletar conta + desempenho detalhado |
+| 🔍 Monitores | 🔍 Monitores | Lista todos os monitores com filtros e possibilidade de avaliar (alunos) |
+| 🏫 Alunos Próximos | 🏫 Alunos Próximos | Alunos cadastrados na mesma escola |
+| 📚 Biblioteca | 📚 Biblioteca | Questões de Matemática e Português por descritor/dificuldade |
+| 🎲 Simulado | 🎲 Simulado | Personalize seu simulado (descritores, nível, quantidade de questões) |
+| 📖 FAQ | 📖 FAQ | Perguntas frequentes com busca local + assistente IA (Groq) |
+| — | ✍️ Aprovar Sugestões da FAQ | Monitores revisam e aprovam sugestões enviadas pelos usuários |
+| — | 💬 Minhas Conversas | Lista de conversas ativas com alunos |
+| 🚪 Sair da conta | 🚪 Sair da conta | Desconecta e retorna à tela inicial |
 
-### Monitores
-- Lista todos os monitores cadastrados
+### 🔍 Monitores
+- Lista todos os monitores cadastrados com suas respectivas **notas médias** (avaliações dos alunos)
 - **Filtro por matéria** (Matemática ou Português)
 - **Filtro por escola**
 - **Busca por nome** (parcial, sem diferenciar maiúsculas)
 - Filtros podem ser combinados e limpos
+- Ao selecionar um monitor, é possível:
+  - **Visualizar perfil completo** com nota média
+  - **Avaliar** (apenas alunos da mesma escola, nota 0 a 10, podendo alterar depois)
+  - **Iniciar conversa** (alunos) – veja seção de Chat
 
-### Biblioteca de Questões
+### 💬 Chat entre Aluno e Monitor
+- **Aluno** pode iniciar conversa com qualquer monitor
+- **Monitor** vê suas conversas ativas no menu e pode respondê-las
+- Envio e recebimento de mensagens em tempo real (dentro da mesma sessão)
+- Monitor pode **encerrar a conversa** quando a dúvida for resolvida
+- Após o encerramento, o aluno é convidado a **avaliar o monitor** (dúvida sanada? sim/não) e, se quiser, pode iniciar uma **nova conversa** com o mesmo monitor
+- Toda conversa fica armazenada para histórico
+
+### 📚 Biblioteca de Questões
 - Matérias disponíveis: **Matemática** e **Português**
 - 5 descritores por matéria, exibidos **5 a 5** com botão de avançar
 - 3 níveis de dificuldade: 😊 Fácil, 😐 Médio, 😤 Difícil
 - 5 questões por nível com verificação de resposta em tempo real
 - **Placar** ao final com mensagem de desempenho
 
-### Perfil
-- Exibe todos os dados do usuário logado
-- **Deletar conta** com dupla confirmação (confirmação + senha)
+### 🎲 Simulado Personalizado
+- Permite ao usuário **combinar múltiplos descritores e níveis** de dificuldade
+- Opções disponíveis:
+  - Adicionar descritor (escolhe matéria → descritor → nível)
+  - Remover descritor
+  - Definir quantidade de questões: 5, 10, 15, 20 ou **todas as disponíveis**
+- As questões são **embaralhadas aleatoriamente** a partir dos blocos selecionados
+- Ao final, o desempenho é **registrado automaticamente** (acertos por matéria/descritor)
+- Exibe resultado com percentual e mensagem motivacional
+
+### 📊 Desempenho Detalhado
+- Acessível pelo **Meu Perfil** → "Mais detalhes"
+- Mostra:
+  - Total de questões respondidas, acertos, erros e percentual geral
+  - Desempenho por assunto (Matemática/Português ou descritor)
+  - Assunto com mais acertos e com mais erros
+- Baseado nos simulados realizados (atualização automática)
+
+### ❓ FAQ com Assistente IA
+- **Busca local**: digite uma dúvida e o sistema procura palavras-chave nas perguntas cadastradas (ignora acentos e palavras genéricas)
+- **Resultados**: exibe perguntas encontradas; o usuário pode escolher uma para ver a resposta
+- **Sem resultados**: oferece três opções:
+  1. Buscar novamente
+  2. **Consultar assistente IA** (integração com Groq – modelo Llama 3.1 8B)
+  3. Ver todas as perguntas cadastradas
+- A resposta da IA pode ser **sugerida para a FAQ** – a sugestão fica pendente para aprovação de um monitor
+- **Monitores** têm uma opção extra no menu: **Aprovar Sugestões da FAQ**
+  - Visualizam sugestões pendentes
+  - Podem **aceitar, editar pergunta/resposta ou rejeitar**
+  - Quando aprovada, a pergunta entra na FAQ oficial
+
+### 👤 Perfil
+- Exibe todos os dados do usuário logado (nome, e-mail, escola, etc.)
+- Mostra também estatísticas resumidas de desempenho
+- **Deletar conta** com dupla confirmação (confirmação + senha) – ação irreversível
+
+### ⭐ Avaliação de Monitores
+- Apenas alunos podem avaliar
+- Só é permitido avaliar monitores da **mesma escola** do aluno
+- Nota inteira de 0 a 10
+- Um aluno pode avaliar o mesmo monitor várias vezes, mas a nota anterior é **substituída**
+- A nota média é exibida na lista de monitores e no perfil do monitor
 
 ---
 
-##  Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 monitora_ae/
 │
-├── app.py                  <- Ponto de entrada. Execute: python app.py
-├── README.md               <- Documentação principal do projeto
-├── router.py               <- Controla a navegação entre as telas do terminal
-│
-├── data/
-│   ├── avaliacoes.json     <- Logs e notas das avaliações dos monitores
-│   ├── conversas.json      <- Histórico das mensagens trocadas no chat
-│   ├── desempenho.json     <- Dados de acertos/erros dos estudantes
-│   ├── faq.json            <- Banco de perguntas e respostas frequentes
-│   ├── ids_validos.json    <- IDs de monitor autorizados para cadastro
-│   ├── sugestoes_faq.json  <- Sugestões enviadas pelos usuários para o FAQ
-│   └── usuarios.json       <- Banco de dados de usuários (gerado automaticamente)
-│
-├── questoes/
-│   └── banco_questoes.json <- 150 questões (5 desc × 3 níveis × 5 questões × 2 matérias)
+├── app.py                    ← Ponto de entrada. Execute: python app.py
+├── router.py                 ← Controla a navegação entre telas
 │
 ├── telas/
-│   ├── alunos_proximos.py  <- Visualização de alunos da mesma escola
-│   ├── auth.py             <- Telas de Login, Cadastro e Redefinição de senha
-│   ├── biblioteca.py       <- Menu de descritores e banco de questões
-│   ├── chat.py             <- Interface de chat ativo entre alunos e monitores
-│   ├── desempenho_detalhes.py <- Gráficos e relatórios de evolução do aluno
-│   ├── faq.py              <- Central de ajuda e dúvidas frequentes
-│   ├── lista_conversas.py  <- Histórico de chats abertos para o usuário
-│   ├── menu.py             <- Menu principal pós-login (Aluno / Monitor)
-│   ├── monitores.py        <- Listagem e busca de monitores com filtros
-│   ├── perfil.py           <- Detalhes do perfil e opção de deletar conta
-│   └── simulado.py         <- Inicialização e execução de simulados
+│   ├── auth.py               ← Login, Cadastro e Redefinir senha
+│   ├── menu.py               ← Menu principal pós-login
+│   ├── perfil.py             ← Perfil e deletar conta + desempenho detalhado
+│   ├── monitores.py          ← Listagem de monitores com filtros e avaliação
+│   ├── alunos_proximos.py    ← Alunos da mesma escola
+│   ├── biblioteca.py         ← Descritores e questões fixas
+│   ├── simulado.py           ← Simulado personalizado (com registro de desempenho)
+│   ├── faq.py                ← FAQ com busca local + IA (Groq) e aprovação de sugestões
+│   ├── chat.py               ← Chat entre aluno e monitor
+│   ├── lista_conversas.py    ← Lista de conversas ativas para monitores
+│   └── desempenho_detalhes.py← Estatísticas avançadas de desempenho
 │
 ├── utils/
-│   ├── avaliacoes.py       <- Funções lógicas para cálculo e salvamento de notas
-│   ├── chat.py             <- Regras de negócio e envio de mensagens
-│   ├── desempenho.py       <- Processamento de estatísticas e rendimento
-│   ├── emojis.py           <- Central de mapeamento de ícones e emojis para o terminal
-│   ├── terminal.py         <- Formatação visual do terminal (cores, cabeçalhos, menus)
-│   └── usuarios.py         <- Manipulação e persistência do banco de usuários
+│   ├── terminal.py           ← Funções de formatação do terminal (cores, menus)
+│   ├── usuarios.py           ← Leitura/escrita do banco de usuários
+│   ├── chat.py               ← Gerenciamento de conversas (criar, adicionar mensagem, encerrar)
+│   ├── avaliacoes.py         ← Registro e cálculo de avaliações de monitores
+│   └── desempenho.py         ← Registro e consulta de desempenho em simulados
 │
-└── validacoes/
-    └── validadores.py      <- Regras de validação centralizadas (CPF, e-mail, senhas)
-
+├── validacoes/
+│   └── validadores.py        ← Todas as regras de validação centralizadas
+│
+├── data/
+│   ├── usuarios.json         ← Banco de dados de usuários
+│   ├── ids_validos.json      ← IDs de monitor autorizados
+│   ├── avaliacoes.json       ← Avaliações dos monitores (aluno → monitor, nota)
+│   ├── conversas.json        ← Histórico de conversas (mensagens, status)
+│   ├── faq.json              ← Perguntas frequentes oficiais
+│   └── sugestoes_faq.json    ← Sugestões de perguntas/respostas (pendentes de aprovação)
+│
+└── questoes/
+    └── banco_questoes.json   ← 150 questões (5 desc × 3 níveis × 5 questões × 2 matérias)
 ```
 
 ---
 
-##  Como executar
+## Como executar
 
 ### Pré-requisitos
 - Python **3.8** ou superior
-- Nenhuma biblioteca externa — usa apenas módulos da biblioteca padrão do Python (`json`, `os`, `re`, `getpass`)
+- Nenhuma biblioteca externa obrigatória – usa apenas módulos da biblioteca padrão (`json`, `os`, `re`, `getpass`, `unicodedata`, `urllib`)
+- Para a funcionalidade de **Assistente IA** (FAQ) é necessário uma **chave de API do Groq** (opcional – sem ela a busca local continua funcionando)
 
 ### Passos
 
@@ -120,7 +173,10 @@ git clone https://github.com/seu-usuario/monitora_ae.git
 # 2. Entre na pasta do projeto
 cd monitora_ae
 
-# 3. Execute
+# 3. (Opcional) Configure a chave da API Groq para o assistente IA
+#    Crie um arquivo .env na raiz com: GROQ_API_KEY=sua_chave_aqui
+
+# 4. Execute
 python app.py
 ```
 
@@ -128,9 +184,9 @@ python app.py
 
 ---
 
-##  Regras de Cadastro
+## Regras de Cadastro
 
-Todas as validações ficam centralizadas em `validacoes/validadores.py`, o que facilita encontrar e alterar qualquer restrição.
+Todas as validações ficam centralizadas em `validacoes/validadores.py`.
 
 ### Nome
 - Mínimo de 3 caracteres
@@ -162,7 +218,7 @@ Todas as validações ficam centralizadas em `validacoes/validadores.py`, o que 
 
 ---
 
-##  Banco de Dados
+## Banco de Dados
 
 O sistema usa arquivos **JSON** como banco de dados local — sem necessidade de instalar nenhum banco de dados externo.
 
@@ -192,6 +248,27 @@ Armazena todos os usuários cadastrados. Criado automaticamente no primeiro cada
 }
 ```
 
+### `data/avaliacoes.json`
+Armazena as avaliações feitas por alunos a monitores.
+
+```json
+{
+  "avaliacoes": [
+    {
+      "email_avaliador": "aluno@email.com",
+      "email_monitor": "monitor@email.com",
+      "nota": 9
+    }
+  ]
+}
+```
+
+### `data/conversas.json`
+Histórico completo de conversas (aluno, monitor, mensagens, status, timestamps).
+
+### `data/faq.json` e `data/sugestoes_faq.json`
+Perguntas frequentes oficiais e sugestões pendentes de aprovação.
+
 ### `data/ids_validos.json`
 Lista dos IDs de monitor autorizados. Edite este arquivo para adicionar ou remover IDs.
 
@@ -202,7 +279,7 @@ Lista dos IDs de monitor autorizados. Edite este arquivo para adicionar ou remov
 ```
 
 ### `questoes/banco_questoes.json`
-Banco com 150 questões organizadas por matéria, descritor e dificuldade. Você pode adicionar novas questões seguindo a estrutura:
+Banco com 600 questões organizadas por matéria, descritor e dificuldade. Você pode adicionar novas questões seguindo a estrutura:
 
 ```json
 {
@@ -226,9 +303,9 @@ Banco com 150 questões organizadas por matéria, descritor e dificuldade. Você
 
 ---
 
-##  Como o código está organizado
+## Como o código está organizado
 
-O projeto usa alguns conceitos de **Programação Orientada a Objetos (POO)**:
+O projeto usa **Programação Orientada a Objetos (POO)**:
 
 - **Classes** (`class`) — agrupam dados e funções relacionadas. Cada tela é uma classe.
 - **Métodos** (`def` dentro de uma classe) — são as funções da classe.
@@ -239,7 +316,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 
 ---
 
-##  Personalizações rápidas
+## Personalizações rápidas
 
 | O que mudar | Onde mexer |
 |---|---|
@@ -248,147 +325,68 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 | IDs de monitor válidos | `data/ids_validos.json` |
 | Adicionar questões | `questoes/banco_questoes.json` |
 | Regras de senha | `validacoes/validadores.py` → `validar_senha()` |
+| FAQ inicial | `data/faq.json` |
+| Chave da API Groq (IA) | Arquivo `.env` na raiz do projeto |
 
 ---
 
-##  Tipos de usuário
+## Tipos de usuário
 
 ### Aluno
 - Cadastra-se com nome, escola, e-mail e senha
-- Acessa a biblioteca de questões
+- Acessa a biblioteca de questões e simulados
 - Vê monitores disponíveis e alunos da mesma escola
+- Pode iniciar conversa com qualquer monitor
+- Pode avaliar monitores (da mesma escola)
+- Tem seu desempenho registrado e pode visualizá-lo
 
 ### Monitor
 - Além dos dados do aluno, precisa de: matéria que monitora e ID de monitor
 - O ID é validado contra a lista em `data/ids_validos.json`
+- Pode responder conversas de alunos (menu "Minhas Conversas")
+- Pode encerrar conversas
+- Pode aprovar/rejeitar sugestões de FAQ enviadas pelos usuários
 
 ---
 
-##  Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **Python 3** — linguagem principal
 - **JSON** — armazenamento de dados
-- **Módulos nativos**: `os`, `re`, `json`, `getpass`
-- Sem dependências externas — basta ter o Python instalado
+- **Módulos nativos**: `os`, `re`, `json`, `getpass`, `unicodedata`, `urllib`
+- **API Groq** (opcional) — para o assistente de IA na FAQ
+- Sem dependências externas obrigatórias — basta ter o Python instalado
 
 ---
 
-## Conteúdo das VAs
+## Funcionalidades já implementadas (status atual)
+
+### ✅ Totalmente implementadas
+- Sistema completo de autenticação (login, cadastro, redefinição de senha)
+- Menu dinâmico para Aluno e Monitor
+- Perfil com exclusão de conta e desempenho detalhado
+- Listagem de monitores com filtros e avaliação (com média)
+- Listagem de alunos da mesma escola
+- Biblioteca de questões com 150 questões (5 descritores × 3 níveis × 5 questões × 2 matérias)
+- Simulado personalizado (escolha de descritores, nível, quantidade) com registro de desempenho
+- Chat entre aluno e monitor (criação, envio de mensagens, encerramento, avaliação pós-conversa)
+- FAQ com busca local inteligente (ignora acentos, palavras genéricas, busca por raiz)
+- Integração com IA (Groq) para responder dúvidas não encontradas na FAQ
+- Sugestão de novas perguntas/respostas para a FAQ
+- Aprovação de sugestões por monitores (edição, aceite, rejeição)
+- Acompanhamento de desempenho (total de questões, acertos, erros, percentual, assuntos com mais acertos/erros)
 
 ---
 
-## ✅ 1VA - Desenvolvido e Lançado
+## Próximos passos (planejados)
 
-### Funcionalidades implementadas:
-
-### Sistema de Autenticação
-
-- Login (Aluno e Monitor)
-- Cadastro com validações completas
-- Redefinição de senha (e-mail + nome)
-- Validação de ID para monitores
-
-### Tela Inicial
-
-- Opções: Login, Cadastro, Esqueci minha senha, Sair
-- Navegação por fluxo controlado
-
-### Menu Principal
-
-- Saudação personalizada ao usuário
-- Acesso às funcionalidades principais
-
-### Busca de Monitores
-
-- Listagem de monitores cadastrados
-- Filtros por:
-  - Matéria
-  - Escola
-  - Nome (busca parcial)
-  - Combinação e limpeza de filtros
-
-### Biblioteca de Questões
-
-- Matérias: Matemática e Português
-- Descritores organizados com paginação
-- Níveis de dificuldade:
-  -😊 Fácil
-  -😐 Médio
-  -😤 Difícil
-- Execução de questões com correção imediata
-- Resultado final com desempenho
-
-### Perfil do Usuário
-
-- Visualização dos dados cadastrados
-- Exclusão de conta com confirmação dupla
-
----
-
-## 🚧 2VA - Em Desenvolvimento
-
-### Funcionalidades em desenvolvimento:
-
-### Chat entre usuários
-- Comunicação entre aluno e monitor
-- Envio e recebimento de mensagens
-- Tratamento de erros (mensagem vazia, falhas, etc.)
-
-### FAQ (Perguntas Frequentes)
-- Lista de dúvidas comuns
-- Busca por perguntas
-- Sugestão de suporte adicional
-
-### Avaliação de Monitores
-- Sistema de notas (0 a 10)
-- Cálculo de média automática
-- Restrições:
-   - Não é permitido se autoavaliar
-   - Apenas uma avaliação por monitor
-
-### Simulados
-
-- Configuração personalizada:
-   - Matéria
-   - Dificuldade
-   - Quantidade de questões
-   - Geração aleatória de questões
-   - Resultado com porcentagem de acertos
-
-### Acompanhamento de Desempenho
-
-- Histórico baseado nos simulados realizados
-- Métricas:
-   - Total de questões
-   - Taxa de acertos
-   - Atualização automática
-
----
-
-## 🚧 3VA - Em Desenvolvimento
-
-## Funcionalidades planejadas:
-
-#### Solicitação de Material
-- Solicitação de conteúdos por alunos
-- Resposta por monitores
-
-#### Ranking de Alunos
-- Classificação baseada em desempenho
-- Comparação entre usuários
-
-#### Seleção de Monitores
-- Escolha de monitores preferidos
-- Possível vínculo aluno-monitor
-
-#### Sistema de Bolsas
-- Incentivos baseados em desempenho ou participação
-
-#### Notificações
-- Alertas do sistema:
-- Novas mensagens
-- Avaliações
-- Atualizações importantes
+| Funcionalidade | Descrição |
+|---|---|
+| Ranking de Alunos | Classificação baseada em desempenho geral |
+| Solicitação de Material | Aluno pede conteúdo específico, monitor responde |
+| Seleção de Monitores Preferidos | Vínculo aluno-monitor para acompanhamento contínuo |
+| Sistema de Bolsas | Incentivos baseados em desempenho ou participação |
+| Notificações | Alertas sobre novas mensagens, avaliações, etc. |
 
 ---
 
