@@ -16,6 +16,8 @@ O projeto nasceu com o objetivo de ajudar os alunos de escolas públicas estadua
 
 👉 [Acessar pasta no Google Drive](https://drive.google.com/drive/folders/1TWGYSU8sIXvJbo6uLz8xbIwCzJFnt4F6?usp=sharing)
 
+👉 [Acessar artigo no Overleaf](https://www.overleaf.com/read/xwpsfhkbnvdh#71ce97)
+
 ---
 
 ## Funcionalidades
@@ -64,7 +66,7 @@ Após fazer login, o usuário vê a saudação `Olá, {nome}! 👋` e acessa as 
 - Matérias disponíveis: **Matemática** e **Português**
 - 5 descritores por matéria, exibidos **5 a 5** com botão de avançar
 - 3 níveis de dificuldade: 😊 Fácil, 😐 Médio, 😤 Difícil
-- 5 questões por nível com verificação de resposta em tempo real
+- 20 questões por nível com verificação de resposta em tempo real
 - **Placar** ao final com mensagem de desempenho
 
 ### 🎲 Simulado Personalizado
@@ -152,7 +154,7 @@ monitora_ae/
 │   └── sugestoes_faq.json    ← Sugestões de perguntas/respostas (pendentes de aprovação)
 │
 └── questoes/
-    └── banco_questoes.json   ← 150 questões (5 desc × 3 níveis × 5 questões × 2 matérias)
+    └── banco_questoes.json   ← 600 questões (5 desc × 3 níveis × 20 questões × 2 matérias)
 ```
 
 ---
@@ -367,7 +369,7 @@ O **Router** (`router.py`) é responsável por saber qual tela está ativa e que
 - Perfil com exclusão de conta e desempenho detalhado
 - Listagem de monitores com filtros e avaliação (com média)
 - Listagem de alunos da mesma escola
-- Biblioteca de questões com 150 questões (5 descritores × 3 níveis × 5 questões × 2 matérias)
+- Biblioteca de questões com 600 questões (5 descritores × 3 níveis × 20 questões × 2 matérias)
 - Simulado personalizado (escolha de descritores, nível, quantidade) com registro de desempenho
 - Chat entre aluno e monitor (criação, envio de mensagens, encerramento, avaliação pós-conversa)
 - FAQ com busca local inteligente (ignora acentos, palavras genéricas, busca por raiz)
